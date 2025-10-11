@@ -26,6 +26,7 @@
     <script src="{{ asset('assets/js/aos.js') }}"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    @include("common.cookie_alert")
     @stack('script')
 </body>
 </html>
