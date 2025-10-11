@@ -12,7 +12,7 @@
                 <article class="featured-article mb-5" data-aos="fade-up">
                     <div class="featured-image">
                         <img src="{{ $firstBlog->image }}" alt="Drone Teknolojisi" class="img-fluid">
-                        <div class="featured-badge">Öne Çıkan</div>
+                        <div class="featured-badge">@lang('front/blog.txt1')</div>
                     </div>
                     <div class="featured-content">
                         <div class="article-meta">
@@ -39,8 +39,8 @@
                                     </div>
                                     <h5><a href="{{ $blog->url }}">{{ $blog->title }}</a></h5>
                                     <p class="text-muted">{{ $blog->short_description }}</p>
-                                    <a href="{{ $blog->url }}" class="btn btn-outline-primary btn-sm">Devamını
-                                        Oku</a>
+                                    <a href="{{ $blog->url }}"
+                                        class="btn btn-outline-primary btn-sm">@lang('front/blog.txt2')</a>
                                 </div>
                             </article>
                         </div>

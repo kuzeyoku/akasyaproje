@@ -8,8 +8,9 @@
                         <div class="article-header mb-4">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Ana Sayfa</a></li>
-                                    <li class="breadcrumb-item"><a href="{{ route('blogs.index') }}">Blog</a></li>
+                                    <li class="breadcrumb-item"><a href="{{ route('home') }}">@lang('front/breadcrumb.home')</a></li>
+                                    <li class="breadcrumb-item"><a href="{{ route('blogs.index') }}">@lang('front/blog.breadcrumb')</a>
+                                    </li>
                                     <li class="breadcrumb-item active">{{ $blog->title }}</li>
                                 </ol>
                             </nav>
@@ -19,8 +20,8 @@
                                 <span class="mx-2">•</span>
                                 <span class="text-muted">{{ $blog->user->name }}</span>
                                 <span class="mx-2">•</span>
-                                <span class="text-muted"><i class="fas fa-eye me-1"></i>{{ $blog->view_count }}
-                                    görüntüleme</span>
+                                <span class="text-muted">
+                                    <i class="fas fa-eye me-1"></i>{{ $blog->view_count }} @lang('front/blog.txt3')</span>
                             </div>
                             <h1 class="article-title">{{ $blog->title }}</h1>
                         </div>
@@ -43,7 +44,7 @@
                         </div>
                     </article>
                     <div class="related-articles mt-5" data-aos="fade-up">
-                        <h4 class="mb-4">Benzer Yazılar</h4>
+                        <h4 class="mb-4">@lang('front/blog.txt4')</h4>
                         <div class="row g-4">
                             @foreach ($relatedPosts as $item)
                                 <div class="col-md-6">
@@ -59,7 +60,8 @@
                                             </div>
                                             <h5><a href="{{ $blog->url }}">{{ $item->title }}</a></h5>
                                             <p class="text-muted small">{{ $item->short_description }}</p>
-                                            <a href="{{ $blog->url }}" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                                            <a href="{{ $blog->url }}"
+                                                class="btn btn-outline-primary btn-sm">@lang('front/blog.txt2')</a>
                                         </div>
                                     </article>
                                 </div>

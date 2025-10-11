@@ -8,52 +8,47 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="content-area">
-                        <h3 class="about-title">Akasya Harita Proje Planlama</h3>
+                        <h3 class="about-title">@lang('front/about.txt1')</h3>
 
-                        <p class="about-text">
-                            Akasya Proje olarak 2016 yılından bu yana haritacılık ve jeodezi
-                            sektöründe öncü rolümüzü sürdürüyoruz. Deneyimli mühendis kadromuz ve
-                            son teknoloji ekipmanlarımızla, her türlü haritacılık ihtiyacınıza
-                            profesyonel çözümler sunuyoruz.
-                        </p>
+                        <p class="about-text">@lang('front/about.txt2')</p>
 
                         <div class="feature-grid">
                             <div class="feature-item">
                                 <div class="feature-icon">
                                     <i class="fas fa-award"></i>
                                 </div>
-                                <div class="feature-title">Sertifikalı Ekip</div>
-                                <div class="feature-desc">Lisanslı mühendisler</div>
+                                <div class="feature-title">@lang('front/about.txt3')</div>
+                                <div class="feature-desc">@lang('front/about.txt4')</div>
                             </div>
                             <div class="feature-item">
                                 <div class="feature-icon">
                                     <i class="fas fa-cog"></i>
                                 </div>
-                                <div class="feature-title">Modern Teknoloji</div>
-                                <div class="feature-desc">Son teknoloji ekipmanlar</div>
+                                <div class="feature-title">@lang('front/about.txt5')</div>
+                                <div class="feature-desc">@lang('front/about.txt6')</div>
                             </div>
                             <div class="feature-item">
                                 <div class="feature-icon">
                                     <i class="fas fa-clock"></i>
                                 </div>
-                                <div class="feature-title">Hızlı Teslimat</div>
-                                <div class="feature-desc">Zamanında proje teslimi</div>
+                                <div class="feature-title">@lang('front/about.txt7')</div>
+                                <div class="feature-desc">@lang('front/about.txt8')</div>
                             </div>
                             <div class="feature-item">
                                 <div class="feature-icon">
                                     <i class="fas fa-shield-alt"></i>
                                 </div>
-                                <div class="feature-title">Güvenilir Hizmet</div>
-                                <div class="feature-desc">%100 müşteri memnuniyeti</div>
+                                <div class="feature-title">@lang('front/about.txt9')</div>
+                                <div class="feature-desc">@lang('front/about.txt10')</div>
                             </div>
                         </div>
 
                         <div class="cta-buttons">
-                            <a href="{{ route("projects.index") }}" class="btn btn-primary btn-lg">
-                                Projelerimizi İnceleyin
+                            <a href="{{ route('projects.index') }}" class="btn btn-primary btn-lg">
+                                @lang('front/about.txt11')
                             </a>
-                            <a href="{{ route("contact.index") }}" class="btn btn-outline-primary btn-lg">
-                                İletişime Geç
+                            <a href="{{ route('contact.index') }}" class="btn btn-outline-primary btn-lg">
+                                @lang('front/about.txt12')
                             </a>
                         </div>
                     </div>
