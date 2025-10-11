@@ -53,8 +53,12 @@
         </div>
 
         <div class="footer-bottom">
-            <p>@lang('front/footer.copyright', ['title' => setting('general', 'title'), 'year' => date('Y')]) | Gizlilik Politikası | Kullanım Şartları |
-                <a class="text-white" href="{{ route('sitemap.index') }}"
+            <p>@lang('front/footer.copyright', ['title' => setting('general', 'title'), 'year' => date('Y')]) |
+                <a href="/pages/2/gizlilik-sozlesmesi" class="text-white"
+                    onclick="return!window.open(this.href)">@lang('front/footer.txt3')</a> |
+                <a href="/pages/3/kullanim-sozlesmesi" class="text-white"
+                    onclick="return!window.open(this.href)">@lang('front/footer.txt4')</a> |
+                <a href="{{ route('sitemap.index') }}" class="text-white"
                     onclick="return!window.open(this.href)">@lang('front/footer.sitemap')</a>
             </p>
         </div>
