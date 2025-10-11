@@ -1,6 +1,8 @@
 <?php
 
 return [
+    "page_title" => "İletişim",
+    "page_description" => "Projeniz için profesyonel danışmanlık almak üzün hemen bize ulaşın.",
     'meta_title' => 'İletişim',
     'title' => 'İletişim',
     'txt1' => 'İletişim Bilgilerimiz',

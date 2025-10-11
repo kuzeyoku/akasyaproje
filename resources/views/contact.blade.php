@@ -1,6 +1,6 @@
 @extends('layouts.main')
-@section('title', 'İletişim')
-@section('description', 'Projeniz için profesyonel danışmanlık almak üzün hemen bize ulaşın.')
+@section('title', __('front/contact.page_title'))
+@section('description', __('front/contact.page_description'))
 @section('content')
     @include('layouts.breadcrumb')
     <section class="py-5">
@@ -139,99 +139,6 @@
             </div>
         </div>
     </section>
-    {{-- <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="text-center mb-5">
-                        <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Sıkça Sorulan Sorular</h2>
-                        <p class="lead text-muted" data-aos="fade-up" data-aos-delay="200">
-                            Hizmetlerimiz hakkında merak ettiğiniz sorular ve cevapları
-                        </p>
-                    </div>
-
-                    <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="300">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse1">
-                                    Halihazır harita çıkarma süreci ne kadar sürer?
-                                </button>
-                            </h2>
-                            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Projenin büyüklüğüne ve karmaşıklığına bağlı olarak 1-4 hafta arasında değişmektedir.
-                                    Standart bir konut parselinin halihazır haritası genellikle 3-5 iş gününde tamamlanır.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse2">
-                                    3B kent modellemesi için hangi teknolojiler kullanılıyor?
-                                </button>
-                            </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Drone fotogrametrisi, LiDAR uyukarlaması, yeral lazer tarayıcılar ve gelimar
-                                    fotoğrafçılık teknikleri kullanmaktayız. Veriler özel yazılımlarla işlenerek yüksek
-                                    çözünürlüklü 3B modeller oluşturulmaktadır.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse3">
-                                    Proje fiyatları nasıl belirleniyor?
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Fiyatlandırma projenin kapsamı, alan büyüklüğü, detay seviyesi ve teslim süresi gibi
-                                    faktörlere göre belirlenir. Ücretsiz keşif ve danışmanlık hizmeti sonrasında detaylı
-                                    teklif sunulmaktadır.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse4">
-                                    Hangi dosya formatlarında teslim yapılıyor?
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    AutoCAD (DWG), PDF, GeoTIFF, Shapefile, KML/KMZ ve diğer standart CBS formatlarında
-                                    teslim yapmaktayız. 3B modeller için OBJ, PLY, FBX formatları kullanılır.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse5">
-                                    Proje sonrası destek hizmeti veriliyor mu?
-                                </button>
-                            </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Evet, tüm projelerimiz için 6 ay garanti ve teknik destek hizmeti sunmaktayız. Bu
-                                    süreçte dosya düzeltmeleri, format değişiklikleri ve teknik danışmanlık ücretsizdir.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
 @endsection
 @include('common.alert')
 @push('script')

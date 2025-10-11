@@ -18,6 +18,7 @@
     @include('layouts.header')
     @yield('content')
     @include('layouts.footer')
+    @include('layouts.cookie')
     <button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle"
         style="display: none; z-index: 1000;">
         <i class="fas fa-arrow-up"></i>
@@ -26,7 +27,6 @@
     <script src="{{ asset('assets/js/aos.js') }}"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
-    @include('layouts.cookie')
     @stack('script')
 </body>
 

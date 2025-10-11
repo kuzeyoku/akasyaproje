@@ -7,7 +7,8 @@
                         <strong>{{ setting('general', 'title') }}</strong> web sitemizde daha iyi hizmet verebilmek için
                         çerezler kullanıyoruz.
                         Sitemizi kullanmaya devam ederek çerez kullanımımızı kabul etmiş olursunuz.
-                        <a href="#" style="color: #00ccdd; text-decoration: underline;">Gizlilik Politikası</a>
+                        <a href="/pages/4/cerez-politikasi" style="color: #00ccdd; text-decoration: underline;">Gizlilik
+                            Politikası</a>
                     </p>
                 </div>
                 <div class="cookie-actions">
