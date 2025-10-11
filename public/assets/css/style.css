@@ -106,7 +106,7 @@ section {
 
 .breadcrumb-section {
     background: var(--gradient-primary);
-    margin-top: 5rem;
+    padding-top: 10rem;
 }
 
 .breadcrumb {
@@ -124,6 +124,7 @@ section {
     transition: var(--transition);
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.95) !important;
+    padding: 1rem 0;
 }
 
 .navbar.scrolled {
@@ -1335,7 +1336,6 @@ footer h6 {
     font-weight: 400;
 }
 
-/* ========== Blog Detail ========== */
 .blog-detail {
     background: white;
     padding: 2rem;

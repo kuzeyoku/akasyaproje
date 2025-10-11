@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <section class="mt-5" style="background: linear-gradient(135deg, #005F99 0%, #00B7C2 100%);">
+    <section class="breadcrum-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 text-white">

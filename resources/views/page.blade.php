@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <section class="breadcrumb-section mt-5">
+    <section class="breadcrumb-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center text-white">
