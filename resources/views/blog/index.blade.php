@@ -2,6 +2,7 @@
 @section('title', __('front/blog.page_title'))
 @section('description', __('front/blog.page_description'))
 @section('content')
+    @include('layouts.breadcrumb')
     @php
         $firstBlog = $blogs->first();
     @endphp
