@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - GeoPlan Mühendislik</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🗺️%3C/text%3E%3C/svg%3E" />
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <span class="text-primary">GeoPlan</span> <span class="text-secondary">Mühendislik</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Hizmetlerimiz
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">Tüm Hizmetler</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">Halihazır Harita</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">İmar Uygulaması</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">3B Kent Modellemesi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="contact.html">Teklif İste</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 mt-5" style="background: linear-gradient(135deg, #005F99 0%, #00B7C2 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h1 class="display-4 fw-bold mb-3" data-aos="fade-up">Blog</h1>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">
+                        Harita mühendisliği alanındaki son gelişmeler, uzman görüşleri ve sekü sektör haber analysler
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Main Blog Content -->
+            <div class="col-lg-8">
+                <!-- Featured Article -->
+                <article class="featured-article mb-5" data-aos="fade-up">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80" alt="Drone Teknolojisi" class="img-fluid">
+                        <div class="featured-badge">Öne Çıkan</div>
+                    </div>
+                    <div class="featured-content">
+                        <div class="article-meta">
+                            <span class="badge bg-primary me-2">Teknoloji</span>
+                            <span class="text-muted">15 Aralık 2024</span>
+                            <span class="mx-2">•</span>
+                            <span class="text-muted">5 dk okuma</span>
+                        </div>
+                        <h2><a href="blog-detail.html" class="text-decoration-none">Drone Teknolojisinin Harita Mühendisliğindeki Devrimi</a></h2>
+                        <p class="lead text-muted">Modern drone teknolojilerinin harita mühendisliği uygulamalarında nasıl devrim yarattığını, artan doğruluk ve hız avantajlarını detaylı olarak inceliyoruz.</p>
+                        <a href="blog-detail.html" class="btn btn-outline-primary">Devamını Oku</a>
+                    </div>
+                </article>
+
+                <!-- Blog Posts Grid -->
+                <div class="row g-4">
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <article class="blog-card h-100">
+                            <div class="blog-image">
+                                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" alt="3B Modelleme" class="img-fluid">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="text-primary">12 Aralık 2024</span>
+                                    <span class="mx-2">•</span>
+                                    <span class="text-muted">3B Modelleme</span>
+                                </div>
+                                <h5><a href="blog-detail.html">3B Kent Modellemesinde LiDAR Teknolojisi</a></h5>
+                                <p class="text-muted">LiDAR sensörlerinin kent modellemesinde sağladığı avantajları ve uygulama alanlarını inceleyin...</p>
+                                <a href="blog-detail.html" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <article class="blog-card h-100">
+                            <div class="blog-image">
+                                <img src="https://images.unsplash.com/photo-1460472178825-e5240623afd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Sürdürülebilir Planlama" class="img-fluid">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="text-primary">10 Aralık 2024</span>
+                                    <span class="mx-2">•</span>
+                                    <span class="text-muted">Planlama</span>
+                                </div>
+                                <h5><a href="blog-detail.html">Sürdürülebilir Kent Planlamasının Geleceği</a></h5>
+                                <p class="text-muted">Çevre dostu planlama yaklaşımları ve akıllı kent teknolojilerinin entegrasyonu hakkında...</p>
+                                <a href="blog-detail.html" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <article class="blog-card h-100">
+                            <div class="blog-image">
+                                <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80" alt="CBS Analizi" class="img-fluid">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="text-primary">8 Aralık 2024</span>
+                                    <span class="mx-2">•</span>
+                                    <span class="text-muted">CBS</span>
+                                </div>
+                                <h5><a href="blog-detail.html">CBS Analizlerinde Yeni Nesil Yazılımlar</a></h5>
+                                <p class="text-muted">Coğrafi Bilgi Sistemlerinde kullanılan yeni nesil yazılımlar ve özellikleri hakkında kapsamlı inceleme...</p>
+                                <a href="blog-detail.html" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <article class="blog-card h-100">
+                            <div class="blog-image">
+                                <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" alt="Enerji Projeleri" class="img-fluid">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="text-primary">5 Aralık 2024</span>
+                                    <span class="mx-2">•</span>
+                                    <span class="text-muted">Enerji</span>
+                                </div>
+                                <h5><a href="blog-detail.html">Güneş Enerji Santrali Lokasyon Analizi</a></h5>
+                                <p class="text-muted">Güneş enerji santralleri için optimal lokasyon seçiminde kullanılan haritacılık yöntemleri...</p>
+                                <a href="blog-detail.html" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <article class="blog-card h-100">
+                            <div class="blog-image">
+                                <img src="https://images.unsplash.com/photo-1516975417541-5d8e5fb7fad9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Jeodezi" class="img-fluid">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="text-primary">3 Aralık 2024</span>
+                                    <span class="mx-2">•</span>
+                                    <span class="text-muted">Jeodezi</span>
+                                </div>
+                                <h5><a href="blog-detail.html">GNSS Teknolojisindeki Son Gelişmeler</a></h5>
+                                <p class="text-muted">Global Navigasyon Uydu Sistemlerinde yaşanan yenilikler ve jeodezi uygulamalarına etkileri...</p>
+                                <a href="blog-detail.html" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <article class="blog-card h-100">
+                            <div class="blog-image">
+                                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="İmar Planlama" class="img-fluid">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="text-primary">1 Aralık 2024</span>
+                                    <span class="mx-2">•</span>
+                                    <span class="text-muted">İmar</span>
+                                </div>
+                                <h5><a href="blog-detail.html">Dijital İmar Planları ve E-Devlet Entegrasyonu</a></h5>
+                                <p class="text-muted">Dijital imar planlarının hazırlanması ve e-devlet sistemleriyle entegrasyonu süreci...</p>
+                                <a href="blog-detail.html" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <nav aria-label="Blog sayfaları">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" aria-label="Önceki">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Sonraki">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Search Widget -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="100">
+                    <h5 class="widget-title">Blog'da Ara</h5>
+                    <div class="search-form">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="blogSearch" placeholder="Anahtar kelime girin...">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular Topics -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="200">
+                    <h5 class="widget-title">Popüler Konular</h5>
+                    <div class="popular-topics">
+                        <a href="#" class="topic-tag">#Drone Teknolojisi</a>
+                        <a href="#" class="topic-tag">#3B Modelleme</a>
+                        <a href="#" class="topic-tag">#LiDAR</a>
+                        <a href="#" class="topic-tag">#CBS Analizi</a>
+                        <a href="#" class="topic-tag">#GNSS</a>
+                        <a href="#" class="topic-tag">#Jeodezi</a>
+                        <a href="#" class="topic-tag">#Kent Planlama</a>
+                        <a href="#" class="topic-tag">#Enerji Projeleri</a>
+                        <a href="#" class="topic-tag">#Halihazır Harita</a>
+                        <a href="#" class="topic-tag">#İmar Uygulaması</a>
+                    </div>
+                </div>
+
+                <!-- Recent Comments -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="300">
+                    <h5 class="widget-title">Son Yorumlar</h5>
+                    <div class="recent-comments">
+                        <div class="comment-item">
+                            <div class="comment-avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Ali Kaya" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="comment-content">
+                                <h6>Ali Kaya</h6>
+                                <p class="text-muted small">"LiDAR teknolojisi hakkındaki makale çok bilgilendirici..."</p>
+                                <a href="blog-detail.html" class="text-primary small">3B Kent Modellemesi</a>
+                            </div>
+                        </div>
+                        
+                        <div class="comment-item">
+                            <div class="comment-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b975?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Zeynep Demir" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="comment-content">
+                                <h6>Zeynep Demir</h6>
+                                <p class="text-muted small">"Drone uygulamaları için çok faydalı bilgiler..."</p>
+                                <a href="blog-detail.html" class="text-primary small">Drone Teknolojisi</a>
+                            </div>
+                        </div>
+                        
+                        <div class="comment-item">
+                            <div class="comment-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Mehmet Akça" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="comment-content">
+                                <h6>Mehmet Akça</h6>
+                                <p class="text-muted small">"GNSS gelişmeleri hakkında detaylı açıklama..."</p>
+                                <a href="blog-detail.html" class="text-primary small">GNSS Teknolojisi</a>
+                            </div>
+                        </div>
+                        
+                        <div class="comment-item">
+                            <div class="comment-avatar">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Ayşe Yılmaz" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="comment-content">
+                                <h6>Ayşe Yılmaz</h6>
+                                <p class="text-muted small">"Sürdürülebilir planlama yaklaşımları..."</p>
+                                <a href="blog-detail.html" class="text-primary small">Kent Planlaması</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="400">
+                    <h5 class="widget-title">Kategoriler</h5>
+                    <ul class="category-list">
+                        <li><a href="#">Teknoloji <span class="post-count">(12)</span></a></li>
+                        <li><a href="#">3B Modelleme <span class="post-count">(8)</span></a></li>
+                        <li><a href="#">Jeodezi <span class="post-count">(15)</span></a></li>
+                        <li><a href="#">CBS Analizi <span class="post-count">(9)</span></a></li>
+                        <li><a href="#">Kent Planlama <span class="post-count">(11)</span></a></li>
+                        <li><a href="#">Enerji Projeleri <span class="post-count">(6)</span></a></li>
+                        <li><a href="#">İmar ve Planlama <span class="post-count">(7)</span></a></li>
+                        <li><a href="#">Çevre ve Sürdürülebilirlik <span class="post-count">(5)</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="sidebar-widget newsletter-widget" data-aos="fade-left" data-aos-delay="500">
+                    <h5 class="widget-title text-white">Bültene Abone Ol</h5>
+                    <p class="text-white-50">Harita mühendisliği alanındaki son gelişmeleri kaçırmayın!</p>
+                    <form id="newsletterForm">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="E-posta adresiniz" required>
+                        </div>
+                        <button type="submit" class="btn btn-light w-100">
+                            <i class="fas fa-paper-plane me-2"></i>Abone Ol
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">GeoPlan Mühendislik</h5>
+                    <p class="text-light">Harita mühendisliği alanında 25 yıllık deneyimimizle profesyonel hizmet sunuyoruz.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Hızlı Linkler</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Ana Sayfa</a></li>
+                        <li><a href="services.html" class="text-light text-decoration-none">Hizmetlerimiz</a></li>
+                        <li><a href="projects.html" class="text-light text-decoration-none">Projelerimiz</a></li>
+                        <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Hizmetlerimiz</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">Halihazır Harita</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">İmar Uygulaması</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">3B Modelleme</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">Arsa Geliştirme</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">İletişim Bilgileri</h6>
+                    <div class="text-light">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Kızılay Mh. Atatürk Blv. No:123 Çankaya/Ankara</p>
+                        <p><i class="fas fa-phone me-2"></i>+90 312 123 45 67</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@geoplan.com.tr</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light">&copy; 2024 GeoPlan Mühendislik. Tüm hakları saklıdır.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Gizlilik Politikası</a>
+                    <a href="#" class="text-light text-decoration-none">Kullanım Şartları</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle" style="display: none; z-index: 1000;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Additional CSS for Blog Page -->
+    <style>
+        .featured-article {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            margin-bottom: 3rem;
+        }
+        
+        .featured-image {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .featured-content {
+            padding: 2rem;
+        }
+        
+        .featured-content h2 {
+            margin: 1rem 0;
+            font-size: 1.75rem;
+        }
+        
+        .featured-content h2 a {
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+        
+        .featured-content h2 a:hover {
+            color: var(--primary-color);
+        }
+        
+        .article-meta {
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+        }
+        
+        .sidebar-widget {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            margin-bottom: 2rem;
+        }
+        
+        .widget-title {
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .widget-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+        
+        .popular-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .topic-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 183, 194, 0.1);
+            color: var(--primary-color);
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+        
+        .topic-tag:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .recent-comments .comment-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .recent-comments .comment-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .comment-avatar img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+        
+        .comment-content h6 {
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+        
+        .category-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .category-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .category-list a {
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .category-list a:hover {
+            color: var(--primary-color);
+        }
+        
+        .post-count {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .newsletter-widget {
+            background: var(--gradient-primary) !important;
+            color: white;
+        }
+        
+        .pagination .page-link {
+            border-radius: 8px;
+            margin: 0 12px;
+            border: solid 1px var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .pagination .page-item.active .page-link {
+            background: var(--gradient-primary);
+            border-color: var(--primary-color);
+        }
+        
+        .pagination .page-link:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .featured-image {
+                height: 200px;
+            }
+            
+            .featured-content {
+                padding: 1.5rem;
+            }
+            
+            .sidebar-widget {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</body>
+</html>

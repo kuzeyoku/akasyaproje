@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halihazır Harita & Plankote - GeoPlan Mühendislik</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🗺️%3C/text%3E%3C/svg%3E" />
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <span class="text-primary">GeoPlan</span> <span class="text-secondary">Mühendislik</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Hizmetlerimiz
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">Tüm Hizmetler</a></li>
+                            <li><a class="dropdown-item active" href="service-detail.html">Halihazır Harita</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">İmar Uygulaması</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">3B Kent Modellemesi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="contact.html">Teklif İste</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Hero -->
+    <section class="py-5 mt-5" style="background: linear-gradient(135deg, #005F99 0%, #00B7C2 100%);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-white">
+                    <nav aria-label="breadcrumb" data-aos="fade-right">
+                        <ol class="breadcrumb text-white-50">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white-50">Ana Sayfa</a></li>
+                            <li class="breadcrumb-item"><a href="services.html" class="text-white-50">Hizmetler</a></li>
+                            <li class="breadcrumb-item active text-white">Halihazır Harita</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-4 fw-bold mb-3" data-aos="fade-right" data-aos-delay="200">Halihazır Harita & Plankote</h1>
+                    <p class="lead mb-4" data-aos="fade-right" data-aos-delay="400">
+                        Yüksek hassasiyetli ölçme teknikleriyle mevcut yapıların ve arazi durumunun detaylı haritalanması
+                    </p>
+                    <div data-aos="fade-right" data-aos-delay="600">
+                        <a href="#quote-form" class="btn btn-light btn-lg me-3">Ücretsiz Teklif Al</a>
+                        <a href="#service-details" class="btn btn-outline-light btn-lg">Detayları İncele</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Halihazır Harita" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="py-5" id="service-details">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <div class="service-content" data-aos="fade-up">
+                        <h2 class="mb-4">Halihazır Harita Nedir?</h2>
+                        <p class="lead">Halihazır harita, mevcut yapıların, yolların, ağaçların ve diğer arazi detaylarının mevcut durumlarını gösteren teknik bir çizi Coğrafi bilgi sistemleri veya deşimdir.</p>
+                        
+                        <p>Bu haritalar, inşaat projeleri, imar planları, gayrimenkul değerlendirmeleri ve kentsel dönüşüm projeleri için vazgeçilmez bir alt yapı bileşeni olarak kullanılır. GeoPlan Mühendislik olarak, 25 yıllık deneyimimizle en hassas ve güncel halihazır haritaları hazırlıyoruz.</p>
+                        
+                        <div class="row g-4 my-4">
+                            <div class="col-md-6">
+                                <div class="feature-box">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <h5>Yüksek Hassasiyet</h5>
+                                    <p class="text-muted">Santimetre düzeyinde doğruluk ile ölçüm yapılıyor</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-box">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                    </div>
+                                    <h5>Hızlı Teslimat</h5>
+                                    <p class="text-muted">Modern ekipmanlarla kısa sürede teslim</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3>Hizmet Kapsamımız</h3>
+                        <p>Halihazır harita hizmetimiz kapsamında aşağıdaki işlemler yer almaktadır:</p>
+                        
+                        <div class="service-process">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Arazi Keşfi ve Değerlendirme</h5>
+                                    <p>Projenin kapsamı ve gereksinimleri belirlenir, arazi durumu incelenir.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Jeodezik Ölçüm</h5>
+                                    <p>Total station ve GPS teknolojileri ile hassas ölçümler yapılır.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Veri İşleme ve Çizim</h5>
+                                    <p>Elde edilen veriler işlenerek AutoCAD ortamında teknik çizimler hazırlanır.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h5>Kalite Kontrol ve Teslimat</h5>
+                                    <p>Haritalar kontrol edilir ve müşteriye teslim edilir.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="mt-5">Kullanılan Teknolojiler</h3>
+                        
+                        <div class="row g-4 mt-2">
+                            <div class="col-md-6">
+                                <div class="tech-card">
+                                    <i class="fas fa-satellite-dish fa-2x text-primary mb-3"></i>
+                                    <h6>GNSS/GPS Teknolojisi</h6>
+                                    <p class="small text-muted">Yüksek hassasiyetli konum belirleme</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="tech-card">
+                                    <i class="fas fa-crosshairs fa-2x text-primary mb-3"></i>
+                                    <h6>Total Station</h6>
+                                    <p class="small text-muted">Açı ve mesafe ölçümleri</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="tech-card">
+                                    <i class="fas fa-drafting-compass fa-2x text-primary mb-3"></i>
+                                    <h6>AutoCAD</h6>
+                                    <p class="small text-muted">Teknik çizim ve tasarım</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="tech-card">
+                                    <i class="fas fa-map fa-2x text-primary mb-3"></i>
+                                    <h6>CBS Yazılımları</h6>
+                                    <p class="small text-muted">Coğrafi veri analizi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <!-- Service Info Card -->
+                    <div class="service-info-card" data-aos="fade-left">
+                        <h5 class="mb-4">Hizmet Bilgileri</h5>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-clock text-primary"></i>
+                            <div>
+                                <strong>Teslimat Süresi</strong>
+                                <p class="text-muted mb-0">3-10 iş günü</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-file-alt text-primary"></i>
+                            <div>
+                                <strong>Dosya Formatları</strong>
+                                <p class="text-muted mb-0">DWG, PDF, DXF</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-ruler text-primary"></i>
+                            <div>
+                                <strong>Doğruluk</strong>
+                                <p class="text-muted mb-0">±2-5 cm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-shield-alt text-primary"></i>
+                            <div>
+                                <strong>Garanti</strong>
+                                <p class="text-muted mb-0">6 ay teknik destek</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <a href="#quote-form" class="btn btn-primary w-100 mb-3">Teklif Al</a>
+                            <a href="contact.html" class="btn btn-outline-primary w-100">Bilgi İste</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Sample Projects -->
+                    <div class="sample-projects mt-4" data-aos="fade-left" data-aos-delay="200">
+                        <h5 class="mb-4">Örnek Projeler</h5>
+                        
+                        <div class="project-sample">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Örnek Proje 1" class="img-fluid rounded">
+                            <div class="project-info mt-2">
+                                <h6>Konut Projesi Halihazır</h6>
+                                <p class="small text-muted">25,000 m² alan - Ankara</p>
+                                <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Detaylar</a>
+                            </div>
+                        </div>
+                        
+                        <div class="project-sample mt-3">
+                            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Örnek Proje 2" class="img-fluid rounded">
+                            <div class="project-info mt-2">
+                                <h6>Sanayi Bölgesi Haritası</h6>
+                                <p class="small text-muted">150,000 m² alan - Bursa</p>
+                                <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Detaylar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form -->
+    <section class="py-5 bg-light" id="quote-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="quote-form-card" data-aos="fade-up">
+                        <div class="text-center mb-4">
+                            <h2 class="fw-bold mb-3">Halihazır Harita Teklifi Alın</h2>
+                            <p class="lead text-muted">Projenizin detaylarını paylaşın, size özel teklif hazırlayalım.</p>
+                        </div>
+                        
+                        <form id="serviceQuoteForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="projectName" class="form-label">Proje Adı *</label>
+                                    <input type="text" class="form-control" id="projectName" name="projectName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="projectArea" class="form-label">Proje Alanı (m²)</label>
+                                    <input type="number" class="form-control" id="projectArea" name="projectArea" placeholder="örn: 5000">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="clientName" class="form-label">Ad Soyad *</label>
+                                    <input type="text" class="form-control" id="clientName" name="clientName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="clientEmail" class="form-label">E-posta *</label>
+                                    <input type="email" class="form-control" id="clientEmail" name="clientEmail" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="clientPhone" class="form-label">Telefon *</label>
+                                    <input type="tel" class="form-control" id="clientPhone" name="clientPhone" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="urgency" class="form-label">Aciliyet Durumu</label>
+                                    <select class="form-select" id="urgency" name="urgency">
+                                        <option value="normal">Normal (7-10 gün)</option>
+                                        <option value="urgent">Acil (3-5 gün)</option>
+                                        <option value="very-urgent">Çok Acil (1-2 gün)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="projectLocation" class="form-label">Proje Lokasyonu *</label>
+                                    <textarea class="form-control" id="projectLocation" name="projectLocation" rows="2" placeholder="İl, ilçe ve detaylı adres bilgisi" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label for="projectDescription" class="form-label">Proje Açıklaması</label>
+                                    <textarea class="form-control" id="projectDescription" name="projectDescription" rows="4" placeholder="Projenin amacı, özel gereksinimleri ve dikkate alınması gereken detaylar..."></textarea>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <h6 class="mb-3">Ek Hizmetler</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="topographic" name="additionalServices[]" value="topographic">
+                                                <label class="form-check-label" for="topographic">
+                                                    Topografik Harita
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="drone" name="additionalServices[]" value="drone">
+                                                <label class="form-check-label" for="drone">
+                                                    Drone Çekimi
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="3d-model" name="additionalServices[]" value="3d-model">
+                                                <label class="form-check-label" for="3d-model">
+                                                    3B Modelleme
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="cad-drawing" name="additionalServices[]" value="cad-drawing">
+                                                <label class="form-check-label" for="cad-drawing">
+                                                    CAD Çizim Hizmeti
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                                        <label class="form-check-label" for="terms">
+                                            <a href="#" class="text-primary text-decoration-none">Hizmet Şartları</a>'nı okudum ve kabul ediyorum. *
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5">
+                                        <i class="fas fa-calculator me-2"></i>Teklif Hesapla
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Sık Sorulan Sorular</h2>
+                        <p class="lead text-muted" data-aos="fade-up" data-aos-delay="200">
+                            Halihazır harita hizmeti hakkında merak edilenler
+                        </p>
+                    </div>
+                    
+                    <div class="accordion" id="serviceFaqAccordion" data-aos="fade-up" data-aos-delay="300">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="serviceFaq1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#serviceCollapse1">
+                                    Halihazır harita için hangi belgeler gerekli?
+                                </button>
+                            </h2>
+                            <div id="serviceCollapse1" class="accordion-collapse collapse show" data-bs-parent="#serviceFaqAccordion">
+                                <div class="accordion-body">
+                                    Tapu fotokopisi, imar durumu belgesi (varsa) ve proje kapsamını belirten teknik şartname yeterlidir. Özel durumlarda ek belgeler istenebilir.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="serviceFaq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#serviceCollapse2">
+                                    Halihazır harita hassasiyeti nedir?
+                                </button>
+                            </h2>
+                            <div id="serviceCollapse2" class="accordion-collapse collapse" data-bs-parent="#serviceFaqAccordion">
+                                <div class="accordion-body">
+                                    Kullandığımız profesyonel ekipmanlarla ±2-5 cm hassasiyetinde ölçüm yapabiliyoruz. Hassasiyet seviyesi projenin gereksinimine göre belirlenir.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="serviceFaq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#serviceCollapse3">
+                                    Fiyat nasıl hesaplanıyor?
+                                </button>
+                            </h2>
+                            <div id="serviceCollapse3" class="accordion-collapse collapse" data-bs-parent="#serviceFaqAccordion">
+                                <div class="accordion-body">
+                                    Fiyatlandırma alan büyüklüğü, detay seviyesi, arazi zorluğu ve aciliyet durumuna göre belirlenir. Ücretsiz keşif sonrası net fiyat verilir.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="serviceFaq4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#serviceCollapse4">
+                                    Proje sonrası revizyon yapılır mı?
+                                </button>
+                            </h2>
+                            <div id="serviceCollapse4" class="accordion-collapse collapse" data-bs-parent="#serviceFaqAccordion">
+                                <div class="accordion-body">
+                                    Evet, 6 ay içinde tespit edilen hatalar ücretsiz düzeltilir. Küçük format ve çizim düzeltmeleri de garanti kapsamındadır.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">GeoPlan Mühendislik</h5>
+                    <p class="text-light">Harita mühendisliği alanında 25 yıllık deneyimimizle profesyonel hizmet sunuyoruz.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Hızlı Linkler</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Ana Sayfa</a></li>
+                        <li><a href="services.html" class="text-light text-decoration-none">Hizmetlerimiz</a></li>
+                        <li><a href="projects.html" class="text-light text-decoration-none">Projelerimiz</a></li>
+                        <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Hizmetlerimiz</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">Halihazır Harita</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">İmar Uygulaması</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">3B Modelleme</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">Arsa Geliştirme</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">İletişim Bilgileri</h6>
+                    <div class="text-light">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Kızılay Mh. Atatürk Blv. No:123 Çankaya/Ankara</p>
+                        <p><i class="fas fa-phone me-2"></i>+90 312 123 45 67</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@geoplan.com.tr</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light">&copy; 2024 GeoPlan Mühendislik. Tüm hakları saklıdır.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Gizlilik Politikası</a>
+                    <a href="#" class="text-light text-decoration-none">Kullanım Şartları</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle" style="display: none; z-index: 1000;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Service Detail Styles -->
+    <style>
+        .feature-box {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            height: 100%;
+            transition: var(--transition);
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .service-process {
+            margin: 2rem 0;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .step-content h5 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .tech-card {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            height: 100%;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .service-info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            position: sticky;
+            top: 100px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-item i {
+            font-size: 1.25rem;
+        }
+        
+        .sample-projects {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+        }
+        
+        .project-sample {
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .project-sample:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .quote-form-card {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .breadcrumb {
+            background: none;
+            padding: 0;
+        }
+        
+        .breadcrumb-item a {
+            text-decoration: none;
+        }
+        
+        .accordion-item {
+            border: none;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-light);
+            border-radius: var(--border-radius) !important;
+            overflow: hidden;
+        }
+        
+        .accordion-button {
+            background: white;
+            border: none;
+            padding: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .accordion-body {
+            padding: 1.5rem;
+            background: #f8f9fa;
+        }
+        
+        @media (max-width: 768px) {
+            .service-info-card {
+                position: static;
+                margin-top: 2rem;
+            }
+            
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin: 0 auto 1rem;
+            }
+        }
+    </style>
+</body>
+</html>

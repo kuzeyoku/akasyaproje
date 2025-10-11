@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Tasarım 1 - Modern Gradient</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .footer-design-1 {
+            background: linear-gradient(135deg, #0066cc 0%, #00b4d8 50%, #0077b6 100%);
+            color: white;
+            padding: 60px 0 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-design-1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='m0 40l40-40h-40v40z'/%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+        
+        .footer-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00f5ff;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .footer-description {
+            color: #e0f7ff;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 45px;
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .social-icons a:hover {
+            background: #00f5ff;
+            color: #003d5c;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,245,255,0.3);
+        }
+        
+        .footer-section h5 {
+            color: #00f5ff;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            position: relative;
+        }
+        
+        .footer-section h5::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: #00f5ff;
+        }
+        
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-links a {
+            color: #e0f7ff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .footer-links a:hover {
+            color: #00f5ff;
+            padding-left: 5px;
+        }
+        
+        .contact-info {
+            color: #e0f7ff;
+        }
+        
+        .contact-info i {
+            width: 20px;
+            color: #00f5ff;
+            margin-right: 10px;
+        }
+        
+        .contact-item {
+            margin-bottom: 12px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 40px;
+            padding-top: 25px;
+            text-align: center;
+            color: #b8e6ff;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-design-1 {
+                padding: 40px 0 20px 0;
+            }
+            .footer-section {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Demo content -->
+    <div style="height: 500px; background: #f8f9fa; display: flex; align-items: center; justify-content: center;">
+        <h2 class="text-muted">Web Sitesi İçeriği - Footer Tasarım 1</h2>
+    </div>
+    
+    <!-- Footer Design 1 -->
+    <footer class="footer-design-1">
+        <div class="container footer-content">
+            <div class="row">
+                <!-- Sol Kolon: Logo + Açıklama + Sosyal Medya -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-logo">
+                        <i class="fas fa-map-marked-alt me-2"></i>
+                        GeoMap Pro
+                    </div>
+                    <p class="footer-description">
+                        Profesyonel haritacılık ve coğrafi bilgi sistemleri alanında 15 yıllık deneyimimizle, 
+                        en güncel teknolojiler kullanarak hassas ölçüm ve haritalama hizmetleri sunuyoruz.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Orta Kolon: Hizmetler ve Hızlı Linkler -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="footer-section">
+                                <h5>Hizmetlerimiz</h5>
+                                <ul class="list-unstyled footer-links">
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Kadastral Haritalama</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Topografik Ölçüm</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>CBS Çözümleri</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>3D Haritalama</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Drone Ölçümleri</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="footer-section">
+                                <h5>Hızlı Linkler</h5>
+                                <ul class="list-unstyled footer-links">
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Anasayfa</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Hakkımızda</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Projelerimiz</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Kariyer</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sağ Kolon: İletişim Bilgileri -->
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="footer-section">
+                        <h5>İletişim Bilgileri</h5>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Atatürk Bulvarı No:123<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;06420 Çankaya/Ankara
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                +90 (312) 123 45 67
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                +90 (555) 123 45 67
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                info@geomappro.com
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-globe"></i>
+                                www.geomappro.com
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                Pazartesi - Cuma: 08:00 - 18:00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 GeoMap Pro. Tüm hakları saklıdır. | Gizlilik Politikası | Kullanım Şartları</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

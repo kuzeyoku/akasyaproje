@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Teknolojisinin Harita Mühendisliğindeki Yeri - GeoPlan Mühendislik</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🗺️%3C/text%3E%3C/svg%3E" />
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <span class="text-primary">GeoPlan</span> <span class="text-secondary">Mühendislik</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Hizmetlerimiz
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">Tüm Hizmetler</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">Halihazır Harita</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">İmar Uygulaması</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">3B Kent Modellemesi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="contact.html">Teklif İste</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 mt-5">
+        <div class="row g-5">
+            <!-- Main Article Content -->
+            <div class="col-lg-8">
+                <article class="blog-detail" data-aos="fade-up">
+                    <!-- Article Header -->
+                    <div class="article-header mb-4">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                                <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+                                <li class="breadcrumb-item active">Drone Teknolojisi</li>
+                            </ol>
+                        </nav>
+                        
+                        <div class="article-meta mb-3">
+                            <span class="badge bg-primary me-2">Teknoloji</span>
+                            <span class="text-muted">15 Aralık 2024</span>
+                            <span class="mx-2">•</span>
+                            <span class="text-muted">Mehmet Demir</span>
+                            <span class="mx-2">•</span>
+                            <span class="text-muted">5 dk okuma</span>
+                            <span class="mx-2">•</span>
+                            <span class="text-muted"><i class="fas fa-eye me-1"></i>1,247 görüntüleme</span>
+                        </div>
+                        
+                        <h1 class="article-title">Drone Teknolojisinin Harita Mühendisliğindeki Devrimi</h1>
+                    </div>
+                    
+                    <!-- Featured Image -->
+                    <div class="article-image mb-4">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80" alt="Drone Teknolojisi" class="img-fluid rounded">
+                        <p class="image-caption text-muted small mt-2">Modern drone teknolojileri harita mühendisliğinde hassasiyet ve hız konusunda devrim yaratmıştır.</p>
+                    </div>
+                    
+                    <!-- Article Content -->
+                    <div class="article-content">
+                        <p class="lead">Son yıllarda drone teknolojilerinin hızla gelişmesiyle birlikte, harita mühendisliği alanında geleneksel yöntemler yerini daha hızlı, hassas ve maliyet etkin çözümlere bırakmaya başlamıştır.</p>
+                        
+                        <p>Drone fotogrametrisi, özellikle büyük alanların haritalanmasında sağladığı avantajlarla harita mühendisliğinin vazgeçilmez bir parçası haline gelmiştir. Geleneksel yöntemlerle günlerce süren işlemler, artik saatler içinde tamamlanabilmektedir.</p>
+                        
+                        <h3>Drone Teknolojisinin Avantajları</h3>
+                        
+                        <p>Harita mühendisliğinde drone kullanımının sağladığı temel avantajlar şunlardır:</p>
+                        
+                        <ul>
+                            <li><strong>Hız ve Verimlilik:</strong> Geniş alanlar kısa sürede haritalanabilir</li>
+                            <li><strong>Yüksek Çözünürlük:</strong> Santimetre düzeyinde hassasiyet sağlanabilir</li>
+                            <li><strong>Maliyet Etkinliği:</strong> Geleneksel yöntemlere göre daha ekonomik</li>
+                            <li><strong>Erişilebilirlik:</strong> Zor ulaşılan alanlar kolayca haritalanabilir</li>
+                            <li><strong>Güvenlik:</strong> Tehlikeli alanlarda insan riskı ortadan kalkar</li>
+                        </ul>
+                        
+                        <blockquote class="blockquote border-start border-primary border-4 ps-4 my-4">
+                            <p class="mb-0">"Drone teknolojisi, harita mühendisliğinde verilerin toplanması ve işlenmesi süreçlerini köktün değiştirmiştir. Artık daha hızlı, daha hassas ve daha kapsamlı veriler elde edebiliyoruz."</p>
+                            <footer class="blockquote-footer mt-2">Prof. Dr. Ahmet Yılmaz, <cite title="Source Title">Harita Mühendisliği Anabilim Dalı</cite></footer>
+                        </blockquote>
+                        
+                        <h3>Uygulama Alanları</h3>
+                        
+                        <p>Drone teknolojisi harita mühendisliğinin çeşitli alanlarında etkin olarak kullanılmaktadır:</p>
+                        
+                        <div class="row g-3 my-4">
+                            <div class="col-md-6">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="3B Modelleme" class="img-fluid rounded">
+                                <p class="small text-muted mt-2">Drone ile elde edilen verilerden 3B kent modelleri oluşturulmaktadır.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Halihazır Harita" class="img-fluid rounded">
+                                <p class="small text-muted mt-2">Yüksek çözünürlüklü halihazır haritalar hazırlanmaktadır.</p>
+                            </div>
+                        </div>
+                        
+                        <h4>1. Halihazır Harita Hazırlama</h4>
+                        <p>Mevcut yapıların ve arazi durumunun detaylı bir şekilde belgelenmesinde drone teknolojisi vazgeçilmez hale gelmiştir. Çekilen fotoğraflar fotogrametrik işlem yöntemleriyle ortofoto haritalar ve sayısal yükseklik modelleri haline dönüştürülür.</p>
+                        
+                        <h4>2. 3B Kent Modellemesi</h4>
+                        <p>Kentlerin dijital ikizlerinin oluşturulmasında drone verilerinden yararlanılmaktadır. Bu modeller şehir planlaması, afet yönetimi ve turizm alanında geniş kullanım alanı bulmaktadır.</p>
+                        
+                        <h4>3. Çevresel İzleme</h4>
+                        <p>Orman alanlarının takibi, çevre kirliliğinin tespiti ve doğal afetlerin etkilerinin belirlenmesinde drone teknolojisi etkin bir çözüm sunmaktadır.</p>
+                        
+                        <h3>Teknik Özellikler ve Gereksinimler</h3>
+                        
+                        <p>Profesyonel harita mühendisliği uygulamaları için kullanılan drone'ların bazı teknik özellikleri bulunması gerekmektedir:</p>
+                        
+                        <div class="table-responsive my-4">
+                            <table class="table table-striped">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>Özellik</th>
+                                        <th>Minimum Gereksinim</th>
+                                        <th>Profesyonel Öneri</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Kamera Çözünürlüğü</td>
+                                        <td>12 MP</td>
+                                        <td>20+ MP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uçuş Süresi</td>
+                                        <td>25 dakika</td>
+                                        <td>35+ dakika</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GPS Hassasiyeti</td>
+                                        <td>RTK desteği</td>
+                                        <td>PPK desteği</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Menzil</td>
+                                        <td>7 km</td>
+                                        <td>15+ km</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <h3>Gelecekteki Gelişmeler</h3>
+                        
+                        <p>Drone teknolojisinin geleceğinde bizi bekleyen önemli gelişmeler bulunmaktadır:</p>
+                        
+                        <div class="alert alert-info" role="alert">
+                            <h6 class="alert-heading"><i class="fas fa-info-circle me-2"></i>Gelecek Teknolojiler</h6>
+                            <ul class="mb-0">
+                                <li>Yapay zeka destekli otomatik obje tanıma</li>
+                                <li>Real-time veri işleme kapasitesi</li>
+                                <li>Gerçek zamanlı harita güncelleme</li>
+                                <li>Swarm (sürü) drone teknolojisi</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Sonuç</h3>
+                        
+                        <p>Drone teknolojisinin harita mühendisliğinde sağladığı devrim, sektörün geleceğini şekillendirmektedir. Artan hassasiyet, hız ve maliyet etkinliği ile bu teknoloji, harita mühendisliğinin vazgeçilmez bir parçası haline gelmiştir.</p>
+                        
+                        <p>GeoPlan Mühendislik olarak, son teknoloji drone sistemleri ile müşterilerimize en kaliteli hizmeti sunmaya devam ediyoruz. Projelerinizde drone teknolojisinden yararlanmak için bizimle iletişime geçebilirsiniz.</p>
+                    </div>
+                    
+                    <!-- Article Footer -->
+                    <div class="article-footer mt-5 pt-4 border-top">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="article-tags">
+                                    <span class="me-2">Etiketler:</span>
+                                    <a href="#" class="badge bg-light text-dark me-2">#drone</a>
+                                    <a href="#" class="badge bg-light text-dark me-2">#fotogrametri</a>
+                                    <a href="#" class="badge bg-light text-dark me-2">#harita</a>
+                                    <a href="#" class="badge bg-light text-dark">#teknoloji</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                                <div class="article-share">
+                                    <span class="me-2">Paylaş:</span>
+                                    <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="btn btn-outline-info btn-sm me-2"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="btn btn-outline-success btn-sm"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Author Info -->
+                <div class="author-info mt-5" data-aos="fade-up">
+                    <div class="d-flex">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Mehmet Demir" class="rounded-circle me-4" width="80" height="80">
+                        <div>
+                            <h5 class="mb-2">Mehmet Demir</h5>
+                            <p class="text-primary mb-2">Genel Müdür & Harita Mühendisi</p>
+                            <p class="text-muted">20 yıllık sektör deneyimi ile harita mühendisliği alanında uzman. Özellikle drone teknolojileri ve 3B modelleme konularında çok sayıda proje gerçekleştirmiştir.</p>
+                            <div class="social-links">
+                                <a href="#" class="text-primary me-3"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="text-primary me-3"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-primary"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Articles -->
+                <div class="related-articles mt-5" data-aos="fade-up">
+                    <h4 class="mb-4">Benzer Yazılar</h4>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <article class="blog-card h-100">
+                                <div class="blog-image">
+                                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" alt="3B Modelleme" class="img-fluid">
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span class="text-primary">12 Aralık 2024</span>
+                                        <span class="mx-2">•</span>
+                                        <span class="text-muted">3B Modelleme</span>
+                                    </div>
+                                    <h6><a href="blog-detail.html">3B Kent Modellemesinde LiDAR Teknolojisi</a></h6>
+                                    <p class="text-muted small">LiDAR sensörlerinin kent modellemesinde sağladığı avantajları...</p>
+                                    <a href="blog-detail.html" class="btn btn-outline-primary btn-sm">Oku</a>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <article class="blog-card h-100">
+                                <div class="blog-image">
+                                    <img src="https://images.unsplash.com/photo-1516975417541-5d8e5fb7fad9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="GNSS" class="img-fluid">
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span class="text-primary">3 Aralık 2024</span>
+                                        <span class="mx-2">•</span>
+                                        <span class="text-muted">Jeodezi</span>
+                                    </div>
+                                    <h6><a href="blog-detail.html">GNSS Teknolojisindeki Son Gelişmeler</a></h6>
+                                    <p class="text-muted small">Global Navigasyon Uydu Sistemlerinde yaşanan yenilikler...</p>
+                                    <a href="blog-detail.html" class="btn btn-outline-primary btn-sm">Oku</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Popular Topics -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="200">
+                    <h5 class="widget-title">Popüler Konular</h5>
+                    <div class="popular-topics">
+                        <a href="#" class="topic-tag">#Drone Teknolojisi</a>
+                        <a href="#" class="topic-tag">#3B Modelleme</a>
+                        <a href="#" class="topic-tag">#LiDAR</a>
+                        <a href="#" class="topic-tag">#CBS Analizi</a>
+                        <a href="#" class="topic-tag">#GNSS</a>
+                        <a href="#" class="topic-tag">#Jeodezi</a>
+                        <a href="#" class="topic-tag">#Kent Planlama</a>
+                        <a href="#" class="topic-tag">#Enerji Projeleri</a>
+                    </div>
+                </div>
+
+                <!-- Recent Comments -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="300">
+                    <h5 class="widget-title">Son Yorumlar</h5>
+                    <div class="recent-comments">
+                        <div class="comment-item">
+                            <div class="comment-avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Ali Kaya" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="comment-content">
+                                <h6>Ali Kaya</h6>
+                                <p class="text-muted small">"Drone teknolojisi hakkında çok detaylı ve faydalı bilgiler. Teşekkürler!"</p>
+                                <span class="text-primary small">2 saat önce</span>
+                            </div>
+                        </div>
+                        
+                        <div class="comment-item">
+                            <div class="comment-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b975?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Zeynep Demir" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="comment-content">
+                                <h6>Zeynep Demir</h6>
+                                <p class="text-muted small">"Teknik özellikler tablosu çok yararlı olmuş. Sözlük verileri için teşekkürler."</p>
+                                <span class="text-primary small">5 saat önce</span>
+                            </div>
+                        </div>
+                        
+                        <div class="comment-item">
+                            <div class="comment-avatar">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Ayşe Yılmaz" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="comment-content">
+                                <h6>Ayşe Yılmaz</h6>
+                                <p class="text-muted small">"Gelecekteki gelişmeler bölümü çok ilğimi çekti. Makine öğrenmesi konusunda da yazı bekliyoruz."</p>
+                                <span class="text-primary small">1 gün önce</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="400">
+                    <h5 class="widget-title">Kategoriler</h5>
+                    <ul class="category-list">
+                        <li><a href="#">Teknoloji <span class="post-count">(12)</span></a></li>
+                        <li><a href="#">3B Modelleme <span class="post-count">(8)</span></a></li>
+                        <li><a href="#">Jeodezi <span class="post-count">(15)</span></a></li>
+                        <li><a href="#">CBS Analizi <span class="post-count">(9)</span></a></li>
+                        <li><a href="#">Kent Planlama <span class="post-count">(11)</span></a></li>
+                        <li><a href="#">Enerji Projeleri <span class="post-count">(6)</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">GeoPlan Mühendislik</h5>
+                    <p class="text-light">Harita mühendisliği alanında 25 yıllık deneyimimizle profesyonel hizmet sunuyoruz.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Hızlı Linkler</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Ana Sayfa</a></li>
+                        <li><a href="services.html" class="text-light text-decoration-none">Hizmetlerimiz</a></li>
+                        <li><a href="projects.html" class="text-light text-decoration-none">Projelerimiz</a></li>
+                        <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Hizmetlerimiz</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">Halihazır Harita</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">İmar Uygulaması</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">3B Modelleme</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">Arsa Geliştirme</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">İletişim Bilgileri</h6>
+                    <div class="text-light">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Kızılay Mh. Atatürk Blv. No:123 Çankaya/Ankara</p>
+                        <p><i class="fas fa-phone me-2"></i>+90 312 123 45 67</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@geoplan.com.tr</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light">&copy; 2024 GeoPlan Mühendislik. Tüm hakları saklıdır.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Gizlilik Politikası</a>
+                    <a href="#" class="text-light text-decoration-none">Kullanım Şartları</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle" style="display: none; z-index: 1000;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Blog Detail Styles -->
+    <style>
+        .blog-detail {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+        }
+        
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+        
+        .article-meta {
+            font-size: 0.9rem;
+        }
+        
+        .article-image img {
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .image-caption {
+            font-style: italic;
+            text-align: center;
+        }
+        
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .article-content h3 {
+            color: var(--text-dark);
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+        
+        .article-content h4 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+            font-weight: 600;
+        }
+        
+        .author-info {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+        }
+        
+        .sidebar-widget {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            margin-bottom: 2rem;
+        }
+        
+        .widget-title {
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .widget-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+        
+        .popular-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .topic-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 183, 194, 0.1);
+            color: var(--primary-color);
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+        
+        .topic-tag:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .recent-comments .comment-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .recent-comments .comment-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .comment-avatar img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+        
+        .comment-content h6 {
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+        
+        .category-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .category-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .category-list a {
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .category-list a:hover {
+            color: var(--primary-color);
+        }
+        
+        .post-count {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .breadcrumb {
+            background: none;
+            padding: 0;
+        }
+        
+        .breadcrumb-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2rem;
+            }
+            
+            .blog-detail {
+                padding: 1.5rem;
+            }
+            
+            .sidebar-widget {
+                padding: 1.5rem;
+            }
+            
+            .author-info {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@extends('layouts.main')
+@section('content')
+    @include('layouts.slider')
+    @include('layouts.about')
+    @include('layouts.service')
+    @include('layouts.project')
+    @include('layouts.reference')
+    @include('layouts.blog')
+    @include('layouts.cta')
+@endsection

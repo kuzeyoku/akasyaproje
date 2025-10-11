@@ -1,0 +1,69 @@
+@extends('layouts.main')
+@section('content')
+    <section class="mt-5" style="background: linear-gradient(135deg, #005F99 0%, #00B7C2 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h1 class="display-4 fw-bold mb-3" data-aos="fade-up">@lang('front/blog.page_title')</h1>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">
+                        @lang('front/blog.page_description')
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    @php
+        $firstBlog = $blogs->first();
+    @endphp
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <article class="featured-article mb-5" data-aos="fade-up">
+                    <div class="featured-image">
+                        <img src="{{ $firstBlog->image }}" alt="Drone Teknolojisi" class="img-fluid">
+                        <div class="featured-badge">Öne Çıkan</div>
+                    </div>
+                    <div class="featured-content">
+                        <div class="article-meta">
+                            <span class="badge bg-primary me-2">{{ $firstBlog->category->title }}</span>
+                            <span class="text-muted">{{ $firstBlog->created_at->diffForHumans() }}</span>
+                        </div>
+                        <h2><a href="{{ $firstBlog->url }}" class="text-decoration-none">{{ $firstBlog->title }}</a></h2>
+                        <p class="lead text-muted">{{ $firstBlog->short_description }}</p>
+                        <a href="{{ $firstBlog->url }}" class="btn btn-outline-primary">Devamını Oku</a>
+                    </div>
+                </article>
+                <div class="row">
+                    @foreach ($blogs as $blog)
+                        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <article class="blog-card h-100">
+                                <div class="blog-image">
+                                    <img src="{{ $blog->image }}" alt="{{ $blog->title }}" class="img-fluid">
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span class="text-primary">{{ $blog->created_at->format('d M Y') }}</span>
+                                        <span class="mx-2">•</span>
+                                        <span class="text-muted">{{ $blog->category->title }}</span>
+                                    </div>
+                                    <h5><a href="{{ $blog->url }}">{{ $blog->title }}</a></h5>
+                                    <p class="text-muted">{{ $blog->short_description }}</p>
+                                    <a href="{{ $blog->url }}" class="btn btn-outline-primary btn-sm">Devamını
+                                        Oku</a>
+                                </div>
+                            </article>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        {{ $blogs->links("pagination::default") }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                @include('blog.sidebar')
+            </div>
+        </div>
+    </div>
+@endsection

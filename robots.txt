@@ -1,0 +1,3 @@
+User-agent: *
+Allow:
+Sitemap : https://www.geografik.com.tr/sitemap.xml

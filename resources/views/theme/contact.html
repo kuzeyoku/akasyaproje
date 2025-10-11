@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - GeoPlan Mühendislik</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🗺️%3C/text%3E%3C/svg%3E" />
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <span class="text-primary">GeoPlan</span> <span class="text-secondary">Mühendislik</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Hizmetlerimiz
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">Tüm Hizmetler</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">Halihazır Harita</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">İmar Uygulaması</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">3B Kent Modellemesi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="contact.html">Teklif İste</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 mt-5" style="background: linear-gradient(135deg, #005F99 0%, #00B7C2 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h1 class="display-4 fw-bold mb-3" data-aos="fade-up">İletişim</h1>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">
+                        Projeniz için profesyonel danışmanlık almak üzün hemen bize ulaşın
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Adresimiz</h5>
+                        <p class="text-muted">
+                            Kızılay Mahallesi<br>
+                            Atatürk Bulvarı No:123<br>
+                            Çankaya / Ankara
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5>Telefon</h5>
+                        <p class="text-muted">
+                            Ofis: +90 312 123 45 67<br>
+                            Mobil: +90 555 123 45 67<br>
+                            Faks: +90 312 123 45 68
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>E-posta</h5>
+                        <p class="text-muted">
+                            Genel: info@geoplan.com.tr<br>
+                            Projeler: projeler@geoplan.com.tr<br>
+                            Destek: destek@geoplan.com.tr
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-form-card">
+                        <h3 class="mb-4">Bize Mesaj Gönderin</h3>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">Ad *</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Soyad *</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">E-posta *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Telefon</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Konu *</label>
+                                    <select class="form-select" id="subject" name="subject" required>
+                                        <option value="">Konu seçiniz...</option>
+                                        <option value="genel">Genel Bilgi</option>
+                                        <option value="teklif">Teklif Talebi</option>
+                                        <option value="destek">Teknik Destek</option>
+                                        <option value="is-basvuru">Kariyer / İş Başvurusu</option>
+                                        <option value="ortaklik">Ortaklık Teklifi</option>
+                                        <option value="diger">Diğer</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Mesajınız *</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Mesajınızı buraya yazabilirsiniz..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="privacy" name="privacy" required>
+                                        <label class="form-check-label" for="privacy">
+                                            <a href="#" class="text-primary text-decoration-none">Gizlilik Politikası</a>'nı okudum ve kabul ediyorum. *
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Harita mühendisliği alanındaki gelirşmelerdenerden haberdar olmak için bültenimize abone olmak istiyorum.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="fas fa-paper-plane me-2"></i>Mesaj Gönder
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Map & Additional Info -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="map-card">
+                        <h3 class="mb-4">Ofis Lokasyonumuz</h3>
+                        <div id="map" style="height: 300px; border-radius: 12px; overflow: hidden;"></div>
+
+                        <div class="working-hours mt-4">
+                            <h5><i class="fas fa-clock me-2 text-primary"></i>Çalışma Saatleri</h5>
+                            <div class="row g-3 mt-2">
+                                <div class="col-6">
+                                    <strong>Pazartesi - Cuma:</strong><br>
+                                    <span class="text-muted">08:30 - 18:00</span>
+                                </div>
+                                <div class="col-6">
+                                    <strong>Cumartesi:</strong><br>
+                                    <span class="text-muted">09:00 - 13:00</span>
+                                </div>
+                                <div class="col-6">
+                                    <strong>Pazar:</strong><br>
+                                    <span class="text-muted">Kapalı</span>
+                                </div>
+                                <div class="col-6">
+                                    <strong>Acil Durum:</strong><br>
+                                    <span class="text-muted">7/24 Ulaşılabilir</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quick-contact mt-4">
+                            <h5><i class="fas fa-tachometer-alt me-2 text-primary"></i>Hızlı İletişim</h5>
+                            <div class="d-flex gap-3 mt-3">
+                                <a href="tel:+903121234567" class="btn btn-outline-primary flex-fill">
+                                    <i class="fas fa-phone me-2"></i>Ara
+                                </a>
+                                <a href="mailto:info@geoplan.com.tr" class="btn btn-outline-primary flex-fill">
+                                    <i class="fas fa-envelope me-2"></i>E-posta
+                                </a>
+                                <a href="https://wa.me/905551234567" class="btn btn-outline-success flex-fill" target="_blank">
+                                    <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Ekibimiz</h2>
+                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="200">
+                        Alanında uzman, deneyimli mühendis ve teknisyen kadromuzla hizmetinizdeyiz
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card text-center">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80" alt="Mehmet Demir" class="img-fluid">
+                        </div>
+                        <div class="team-info">
+                            <h5>Mehmet Demir</h5>
+                            <p class="text-primary">Genel Müdür & Harita Mühendisi</p>
+                            <p class="text-muted small">20 yıllık sektör deneyimi</p>
+                            <div class="team-social">
+                                <a href="#" class="text-primary me-3"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="text-primary"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card text-center">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b975?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80" alt="Ayşe Kaya" class="img-fluid">
+                        </div>
+                        <div class="team-info">
+                            <h5>Ayşe Kaya</h5>
+                            <p class="text-primary">Proje Müdürü & Jeodezi Uzmanı</p>
+                            <p class="text-muted small">15 yıllık sektör deneyimi</p>
+                            <div class="team-social">
+                                <a href="#" class="text-primary me-3"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="text-primary"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-card text-center">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80" alt="Ali Vural" class="img-fluid">
+                        </div>
+                        <div class="team-info">
+                            <h5>Ali Vural</h5>
+                            <p class="text-primary">3B Modelleme Uzmanı</p>
+                            <p class="text-muted small">12 yıllık sektör deneyimi</p>
+                            <div class="team-social">
+                                <a href="#" class="text-primary me-3"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="text-primary"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-card text-center">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80" alt="Zeynep Akça" class="img-fluid">
+                        </div>
+                        <div class="team-info">
+                            <h5>Zeynep Akça</h5>
+                            <p class="text-primary">CBS Analisti</p>
+                            <p class="text-muted small">8 yıllık sektör deneyimi</p>
+                            <div class="team-social">
+                                <a href="#" class="text-primary me-3"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="text-primary"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Sıkça Sorulan Sorular</h2>
+                        <p class="lead text-muted" data-aos="fade-up" data-aos-delay="200">
+                            Hizmetlerimiz hakkında merak ettiğiniz sorular ve cevapları
+                        </p>
+                    </div>
+
+                    <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="300">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                    Halihazır harita çıkarma süreci ne kadar sürer?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Projenin büyüklüğüne ve karmaşıklığına bağlı olarak 1-4 hafta arasında değişmektedir. Standart bir konut parselinin halihazır haritası genellikle 3-5 iş gününde tamamlanır.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                    3B kent modellemesi için hangi teknolojiler kullanılıyor?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Drone fotogrametrisi, LiDAR uyukarlaması, yeral lazer tarayıcılar ve gelimar fotoğrafçılık teknikleri kullanmaktayız. Veriler özel yazılımlarla işlenerek yüksek çözünürlüklü 3B modeller oluşturulmaktadır.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                    Proje fiyatları nasıl belirleniyor?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Fiyatlandırma projenin kapsamı, alan büyüklüğü, detay seviyesi ve teslim süresi gibi faktörlere göre belirlenir. Ücretsiz keşif ve danışmanlık hizmeti sonrasında detaylı teklif sunulmaktadır.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                    Hangi dosya formatlarında teslim yapılıyor?
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    AutoCAD (DWG), PDF, GeoTIFF, Shapefile, KML/KMZ ve diğer standart CBS formatlarında teslim yapmaktayız. 3B modeller için OBJ, PLY, FBX formatları kullanılır.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                    Proje sonrası destek hizmeti veriliyor mu?
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Evet, tüm projelerimiz için 6 ay garanti ve teknik destek hizmeti sunmaktayız. Bu süreçte dosya düzeltmeleri, format değişiklikleri ve teknik danışmanlık ücretsizdir.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">GeoPlan Mühendislik</h5>
+                    <p class="text-light">Harita mühendisliği alanında 25 yıllık deneyimimizle profesyonel hizmet sunuyoruz.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Hızlı Linkler</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Ana Sayfa</a></li>
+                        <li><a href="services.html" class="text-light text-decoration-none">Hizmetlerimiz</a></li>
+                        <li><a href="projects.html" class="text-light text-decoration-none">Projelerimiz</a></li>
+                        <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Hizmetlerimiz</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">Halihazır Harita</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">İmar Uygulaması</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">3B Modelleme</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">Arsa Geliştirme</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">İletişim Bilgileri</h6>
+                    <div class="text-light">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Kızılay Mh. Atatürk Blv. No:123 Çankaya/Ankara</p>
+                        <p><i class="fas fa-phone me-2"></i>+90 312 123 45 67</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@geoplan.com.tr</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light">&copy; 2024 GeoPlan Mühendislik. Tüm hakları saklıdır.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Gizlilik Politikası</a>
+                    <a href="#" class="text-light text-decoration-none">Kullanım Şartları</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle" style="display: none; z-index: 1000;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Additional CSS for Contact Page -->
+    <style>
+        .contact-info-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: white;
+            margin: 0 auto 1.5rem;
+            transition: var(--transition);
+        }
+
+        .contact-info-card:hover .contact-icon {
+            transform: scale(1.1);
+        }
+
+        .contact-form-card,
+        .map-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            height: 100%;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .team-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .team-card:hover .team-image img {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            padding: 1.5rem;
+        }
+
+        .team-social a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: rgba(0, 183, 194, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            transition: var(--transition);
+        }
+
+        .team-social a:hover {
+            background: var(--primary-color);
+            color: white !important;
+        }
+
+        .accordion-item {
+            border: none;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-light);
+            border-radius: var(--border-radius) !important;
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            background: white;
+            border: none;
+            padding: 1.5rem;
+            font-weight: 600;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .accordion-body {
+            padding: 1.5rem;
+            background: #f8f9fa;
+        }
+
+        #map {
+            box-shadow: var(--shadow-light);
+        }
+    </style>
+
+    <!-- Map Initialization -->
+    <script>
+        // Initialize Leaflet map
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ankara coordinates (approximately)
+            const map = L.map('map').setView([39.9208, 32.8541], 15);
+
+            // Add OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Add custom marker
+            const customIcon = L.divIcon({
+                html: '<i class="fas fa-map-marker-alt" style="color: #00B7C2; font-size: 2rem;"></i>',
+                iconSize: [30, 30],
+                className: 'custom-div-icon'
+            });
+
+            // Add marker for office location
+            L.marker([39.9208, 32.8541], { icon: customIcon })
+                .addTo(map)
+                .bindPopup('<strong>GeoPlan Mühendislik</strong><br>Kızılay Mh. Atatürk Blv. No:123<br>Çankaya/Ankara')
+                .openPopup();
+        });
+    </script>
+</body>
+</html>

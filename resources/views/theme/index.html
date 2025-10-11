@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoPlan Mühendislik - Harita ve Jeodezi Hizmetleri</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🗺️%3C/text%3E%3C/svg%3E" />
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <span class="text-primary">GeoPlan</span> <span class="text-secondary">Mühendislik</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Hizmetlerimiz
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">Tüm Hizmetler</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">Halihazır Harita</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">İmar Uygulaması</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">3B Kent Modellemesi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="contact.html">Teklif İste</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <section id="heroCarousel" class="carousel slide hero-section" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0, 95, 153, 0.7), rgba(0, 183, 194, 0.7)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="container">
+                        <div class="row align-items-center min-vh-100">
+                            <div class="col-lg-8">
+                                <h1 class="display-4 fw-bold text-white mb-4" data-aos="fade-up">
+                                    Profesyonel Harita Mühendisliği Hizmetleri
+                                </h1>
+                                <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="200">
+                                    25 yıllık deneyimimizle harita, jeodezi ve coğrafi bilgi sistemleri alanında 
+                                    yenilikçi çözümler sunuyoruz.
+                                </p>
+                                <div data-aos="fade-up" data-aos-delay="400">
+                                    <a href="services.html" class="btn btn-primary btn-lg me-3">Hizmetlerimizi Keşfedin</a>
+                                    <a href="contact.html" class="btn btn-outline-light btn-lg">İletişime Geçin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0, 95, 153, 0.7), rgba(0, 183, 194, 0.7)), url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2125&q=80');">
+                    <div class="container">
+                        <div class="row align-items-center min-vh-100">
+                            <div class="col-lg-8">
+                                <h1 class="display-4 fw-bold text-white mb-4" data-aos="fade-up">
+                                    3B Kent Modellemesi ve Dijital İkiz Teknolojisi
+                                </h1>
+                                <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="200">
+                                    Drone fotogrametrisi ve LiDAR teknolojileriyle şehrinizin dijital ikizini oluşturuyoruz.
+                                </p>
+                                <div data-aos="fade-up" data-aos-delay="400">
+                                    <a href="projects.html" class="btn btn-primary btn-lg me-3">Projelerimizi İnceleyin</a>
+                                    <a href="service-detail.html" class="btn btn-outline-light btn-lg">Detaylı Bilgi</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0, 95, 153, 0.7), rgba(0, 183, 194, 0.7)), url('https://images.unsplash.com/photo-1544984243-ec57ea16fe25?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="container">
+                        <div class="row align-items-center min-vh-100">
+                            <div class="col-lg-8">
+                                <h1 class="display-4 fw-bold text-white mb-4" data-aos="fade-up">
+                                    Sürdürülebilir Arsa Geliştirme Projeleri
+                                </h1>
+                                <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="200">
+                                    Çevre dostu yaklaşımlarla arsa geliştirme ve imar planlaması hizmetleri sunuyoruz.
+                                </p>
+                                <div data-aos="fade-up" data-aos-delay="400">
+                                    <a href="contact.html" class="btn btn-primary btn-lg me-3">Ücretsiz Danışmanlık</a>
+                                    <a href="blog.html" class="btn btn-outline-light btn-lg">Blog Yazılarımız</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Hizmetlerimiz</h2>
+                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="200">
+                        Profesyonel kadromuzla harita mühendisliği alanında kapsamlı çözümler sunuyoruz
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <h4>Halihazır Harita & Plankote</h4>
+                        <p class="text-muted">Yüksek hassasiyetli ölçme teknikleriyle mevcut yapıların detaylı haritalarını çıkarıyoruz.</p>
+                        <a href="service-detail.html" class="btn btn-outline-primary">Detayları Gör</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h4>İmar Uygulaması (Parselasyon)</h4>
+                        <p class="text-muted">İmar planlarının arazi üzerinde uygulanması ve parsel sınırlarının belirlenmesi.</p>
+                        <a href="service-detail.html" class="btn btn-outline-primary">Detayları Gör</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h4>Planlama</h4>
+                        <p class="text-muted">Kentsel ve bölgesel planlama projelerinde analiz ve tasarım hizmetleri.</p>
+                        <a href="service-detail.html" class="btn btn-outline-primary">Detayları Gör</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4>Arsa Geliştirme</h4>
+                        <p class="text-muted">Sürdürülebilir arsa geliştirme projeleri ve çevre dostu planlama çözümleri.</p>
+                        <a href="service-detail.html" class="btn btn-outline-primary">Detayları Gör</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h4>3B Kent Modellemesi</h4>
+                        <p class="text-muted">Drone ve LiDAR teknolojileriyle üç boyutlu kent modellemesi ve dijital ikiz oluşturma.</p>
+                        <a href="service-detail.html" class="btn btn-outline-primary">Detayları Gör</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <h4>Enerji Yatırım Projeleri</h4>
+                        <p class="text-muted">Güneş ve rüzgar enerji santralleri için araza uygunluk analizi ve planlama.</p>
+                        <a href="service-detail.html" class="btn btn-outline-primary">Detayları Gör</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="services.html" class="btn btn-primary btn-lg">Tüm Hizmetlerimizi Görüntüle</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-5 bg-light" id="projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Projelerimiz</h2>
+                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="200">
+                        Gerçekleştirdiğimiz başarılı projeler ve devam eden çalışmalarımız
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Ankara Kent Merkezi 3B Modeli" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-status tamamlandi">Tamamlandı</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5>Ankara Kent Merkezi 3B Modeli</h5>
+                            <p class="text-muted">Başkentin merkezi için detaylı üç boyutlu kent modeli ve dijital ikiz projesi.</p>
+                            <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Proje Detayları</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="İstanbul Boğazı Halihazır Harita" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-status devam-eden">Devam Eden</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5>İstanbul Boğazı Halihazır Harita</h5>
+                            <p class="text-muted">Boğaziçi kıyı şeridinin detaylı haritalaması ve çevre analizi çalışması.</p>
+                            <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Proje Detayları</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" alt="Güneş Enerji Santrali Planlama" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-status tamamlandi">Tamamlandı</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5>Güneş Enerji Santrali Planlama</h5>
+                            <p class="text-muted">500 MW kapasiteli güneş enerji santrali için arazi analizi ve planlama.</p>
+                            <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Proje Detayları</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="projects.html" class="btn btn-primary btn-lg">Tüm Projelerimizi İnceleyin</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section class="py-5" id="references">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Referanslarımız</h2>
+                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="200">
+                        Güvenilir iş ortaklarımız ve memnun müşterilerimiz
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row align-items-center g-4">
+                <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="reference-logo">
+                        <img src="https://via.placeholder.com/150x80/005F99/FFFFFF?text=Belediye" alt="Belediye" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="reference-logo">
+                        <img src="https://via.placeholder.com/150x80/00B7C2/FFFFFF?text=İmar+A.Ş." alt="İmar A.Ş." class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="reference-logo">
+                        <img src="https://via.placeholder.com/150x80/005F99/FFFFFF?text=Enerji+Ltd." alt="Enerji Ltd." class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="reference-logo">
+                        <img src="https://via.placeholder.com/150x80/00B7C2/FFFFFF?text=İnşaat+Corp." alt="İnşaat Corp." class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="reference-logo">
+                        <img src="https://via.placeholder.com/150x80/005F99/FFFFFF?text=Plan+Co." alt="Plan Co." class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="reference-logo">
+                        <img src="https://via.placeholder.com/150x80/00B7C2/FFFFFF?text=Geliştirme" alt="Geliştirme" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section class="py-5 bg-light" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Blog</h2>
+                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="200">
+                        Harita mühendisliği alanındaki son gelişmeler ve uzman görüşlerimiz
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <article class="blog-card h-100">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80" alt="Drone Teknolojisi" class="img-fluid">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="text-primary">15 Aralık 2024</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-muted">Teknoloji</span>
+                            </div>
+                            <h5><a href="blog-detail.html">Drone Teknolojisinin Harita Mühendisliğindeki Yeri</a></h5>
+                            <p class="text-muted">Modern drone teknolojilerinin harita mühendisliği uygulamalarında nasıl devrim yarattığını keşfedin...</p>
+                            <a href="blog-detail.html" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <article class="blog-card h-100">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" alt="3B Modelleme" class="img-fluid">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="text-primary">12 Aralık 2024</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-muted">3B Modelleme</span>
+                            </div>
+                            <h5><a href="blog-detail.html">3B Kent Modellemesinde LiDAR Teknolojisi</a></h5>
+                            <p class="text-muted">LiDAR sensörlerinin kent modellemesinde sağladığı avantajları ve uygulama alanlarını inceleyin...</p>
+                            <a href="blog-detail.html" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <article class="blog-card h-100">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1460472178825-e5240623afd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Sürdürülebilir Planlama" class="img-fluid">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="text-primary">10 Aralık 2024</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-muted">Planlama</span>
+                            </div>
+                            <h5><a href="blog-detail.html">Sürdürülebilir Kent Planlamasının Geleceği</a></h5>
+                            <p class="text-muted">Çevre dostu planlama yaklaşımları ve akıllı kent teknolojilerinin entegrasyonu hakkında...</p>
+                            <a href="blog-detail.html" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="blog.html" class="btn btn-primary btn-lg">Tüm Blog Yazılarını Okuyun</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h3 class="mb-3">Projeniz için profesyonel danışmanlık mı arıyorsunuz?</h3>
+                    <p class="mb-0">25 yıllık deneyimimizle size en uygun çözümü sunmaya hazırız. Ücretsiz ön görüşme için hemen iletişime geçin.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                    <a href="contact.html" class="btn btn-light btn-lg mt-3 mt-lg-0">
+                        <i class="fas fa-phone me-2"></i>Hemen Arayın
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <footer class="footer-design-1">
+        <div class="container footer-content">
+            <div class="row">
+                <!-- Sol Kolon: Logo + Açıklama + Sosyal Medya -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-logo">
+                        <i class="fas fa-map-marked-alt me-2"></i>
+                        GeoMap Pro
+                    </div>
+                    <p class="footer-description">
+                        Profesyonel haritacılık ve coğrafi bilgi sistemleri alanında 15 yıllık deneyimimizle, 
+                        en güncel teknolojiler kullanarak hassas ölçüm ve haritalama hizmetleri sunuyoruz.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Orta Kolon: Hizmetler ve Hızlı Linkler -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="footer-section">
+                                <h5>Hizmetlerimiz</h5>
+                                <ul class="list-unstyled footer-links">
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Kadastral Haritalama</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Topografik Ölçüm</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>CBS Çözümleri</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>3D Haritalama</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Drone Ölçümleri</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="footer-section">
+                                <h5>Hızlı Linkler</h5>
+                                <ul class="list-unstyled footer-links">
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Anasayfa</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Hakkımızda</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Projelerimiz</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Kariyer</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sağ Kolon: İletişim Bilgileri -->
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="footer-section">
+                        <h5>İletişim Bilgileri</h5>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Atatürk Bulvarı No:123<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;06420 Çankaya/Ankara
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                +90 (312) 123 45 67
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                +90 (555) 123 45 67
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                info@geomappro.com
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-globe"></i>
+                                www.geomappro.com
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                Pazartesi - Cuma: 08:00 - 18:00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 GeoMap Pro. Tüm hakları saklıdır. | Gizlilik Politikası | Kullanım Şartları</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle" style="display: none; z-index: 1000;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerimiz - GeoPlan Mühendislik</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🗺️%3C/text%3E%3C/svg%3E" />
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <span class="text-primary">GeoPlan</span> <span class="text-secondary">Mühendislik</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Hizmetlerimiz
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">Tüm Hizmetler</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">Halihazır Harita</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">İmar Uygulaması</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">3B Kent Modellemesi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">Projelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="contact.html">Teklif İste</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 mt-5" style="background: linear-gradient(135deg, #005F99 0%, #00B7C2 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h1 class="display-4 fw-bold mb-3" data-aos="fade-up">Projelerimiz</h1>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">
+                        25 yıllık deneyimimizle gerçekleştirdiğimiz başarılı projeler ve devam eden çalışmalarımız
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Filters -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="project-filters text-center">
+                        <button class="btn btn-outline-primary active me-2 mb-2" data-filter="all">Tüm Projeler</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="tamamlandı">Tamamlanan Projeler</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="devam">Devam Eden Projeler</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="3b">3B Modelleme</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="enerji">Enerji Projeleri</button>
+                        <button class="btn btn-outline-primary mb-2" data-filter="harita">Harita Projeleri</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Ankara Kent Merkezi 3B Modeli" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-status tamamlandi">Tamamlandı</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="badge bg-primary me-2">3B Modelleme</span>
+                                <span class="text-muted">2024</span>
+                            </div>
+                            <h5>Ankara Kent Merkezi 3B Modeli</h5>
+                            <p class="text-muted">Başkentin merkezi için detaylı üç boyutlu kent modeli ve dijital ikiz projesi. Drone fotogrametrisi ve LiDAR teknolojileri kullanılarak hazırlandı.</p>
+                            <div class="project-stats mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marked-alt me-1"></i>125 km² alan
+                                    <i class="fas fa-clock ms-3 me-1"></i>8 ay süre
+                                </small>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Proje Detayları</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="İstanbul Boğazı Halihazır Harita" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-status devam-eden">Devam Eden</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="badge bg-success me-2">Harita</span>
+                                <span class="text-muted">2024</span>
+                            </div>
+                            <h5>İstanbul Boğazı Halihazır Harita</h5>
+                            <p class="text-muted">Boğaziçi kıyı şeridinin detaylı haritalanması ve çevre analizi çalışması. Hidrojeodezi teknikleri ile hassas ölçümler yapılmaktadır.</p>
+                            <div class="project-stats mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marked-alt me-1"></i>45 km kıyı
+                                    <i class="fas fa-clock ms-3 me-1"></i>%75 tamamlandı
+                                </small>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Proje Detayları</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" alt="Güneş Enerji Santrali Planlama" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-status tamamlandi">Tamamlandı</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="badge bg-warning me-2">Enerji</span>
+                                <span class="text-muted">2023</span>
+                            </div>
+                            <h5>Konya Güneş Enerji Santrali</h5>
+                            <p class="text-muted">500 MW kapasiteli güneş enerji santrali için arazi analizi ve planlama. Güneş radyasyonu haritalaması ve topografik çalışmalar tamamlandı.</p>
+                            <div class="project-stats mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marked-alt me-1"></i>2,500 ha alan
+                                    <i class="fas fa-bolt ms-3 me-1"></i>500 MW kapasite
+                                </small>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Proje Detayları</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="İzmir Konut Projesi" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-status tamamlandi">Tamamlandı</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="badge bg-info me-2">İmar</span>
+                                <span class="text-muted">2023</span>
+                            </div>
+                            <h5>İzmir Bornova Konut Projesi</h5>
+                            <p class="text-muted">750 konutluk yerleşim alanı için imar uygulaması ve parselasyon çalışması. Sürdürülebilir kentsel tasarım ilkeleri uygulandı.</p>
+                            <div class="project-stats mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-home me-1"></i>750 konut
+                                    <i class="fas fa-map-marked-alt ms-3 me-1"></i>180 ha alan
+                                </small>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Proje Detayları</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2125&q=80" alt="Antalya Akıllı Kent" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-status devam-eden">Devam Eden</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="badge bg-primary me-2">3B Modelleme</span>
+                                <span class="text-muted">2024</span>
+                            </div>
+                            <h5>Antalya Akıllı Kent Projesi</h5>
+                            <p class="text-muted">Antalya merkez için akıllı kent teknolojileri entegrasyonu ve dijital altyapı planlaması. IoT sensör ağları için lokasyon analizi.</p>
+                            <div class="project-stats mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-wifi me-1"></i>5000+ sensör
+                                    <i class="fas fa-clock ms-3 me-1"></i>%40 tamamlandı
+                                </small>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Proje Detayları</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Rüzgar Enerji Santrali" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-status tamamlandi">Tamamlandı</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="badge bg-warning me-2">Enerji</span>
+                                <span class="text-muted">2023</span>
+                            </div>
+                            <h5>Çanakkale Rüzgar Enerji Santrali</h5>
+                            <p class="text-muted">250 MW kapasiteli rüzgar enerji santrali için rüzgar potansiyeli analizi ve türbin konumlandırma optimizasyonu.</p>
+                            <div class="project-stats mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-wind me-1"></i>85 türbin
+                                    <i class="fas fa-bolt ms-3 me-1"></i>250 MW kapasite
+                                </small>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Proje Detayları</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1516975417541-5d8e5fb7fad9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="OSB Altyapı Projesi" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-status devam-eden">Devam Eden</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="badge bg-info me-2">İmar</span>
+                                <span class="text-muted">2024</span>
+                            </div>
+                            <h5>Bursa OSB Altyapı Projesi</h5>
+                            <p class="text-muted">Organize Sanayi Bölgesi için yol, su, kanalizasyon ve elektrik altyapı planlaması. 350 parselden oluşan sanayi alanı tasarımı.</p>
+                            <div class="project-stats mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-industry me-1"></i>350 parsel
+                                    <i class="fas fa-clock ms-3 me-1"></i>%60 tamamlandı
+                                </small>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Proje Detayları</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80" alt="Tarihi Alan Belgeleme" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-status tamamlandi">Tamamlandı</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="badge bg-success me-2">Harita</span>
+                                <span class="text-muted">2023</span>
+                            </div>
+                            <h5>Efes Tarihi Alanı 3B Belgeleme</h5>
+                            <p class="text-muted">UNESCO Dünya Mirası Efes Antik Kenti'nin yüksek hassasiyetli 3B belgelenmesi ve dijital koruma projesi.</p>
+                            <div class="project-stats mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-landmark me-1"></i>45 yapı
+                                    <i class="fas fa-camera ms-3 me-1"></i>15,000+ fotoğraf
+                                </small>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Proje Detayları</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 9 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Çevre İzleme Projesi" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-status devam-eden">Devam Eden</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="badge bg-success me-2">Çevre</span>
+                                <span class="text-muted">2024</span>
+                            </div>
+                            <h5>Marmara Denizi Çevre İzleme</h5>
+                            <p class="text-muted">Marmara Denizi'nde çevresel değişikliklerin uydu görüntüleri ve drone teknolojisi ile izlenmesi projesi.</p>
+                            <div class="project-stats mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-satellite me-1"></i>24 ay izleme
+                                    <i class="fas fa-clock ms-3 me-1"></i>%25 tamamlandı
+                                </small>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-outline-primary btn-sm">Proje Detayları</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <nav aria-label="Proje sayfaları">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Önceki">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Sonraki">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                        <h2 class="display-4 fw-bold mb-2">250+</h2>
+                        <p class="mb-0">Tamamlanan Proje</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <h2 class="display-4 fw-bold mb-2">15</h2>
+                        <p class="mb-0">Devam Eden Proje</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <h2 class="display-4 fw-bold mb-2">50K+</h2>
+                        <p class="mb-0">Haritası Çıkarılan Km²</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item">
+                        <h2 class="display-4 fw-bold mb-2">25</h2>
+                        <p class="mb-0">Yıl Deneyım</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">GeoPlan Mühendislik</h5>
+                    <p class="text-light">Harita mühendisliği alanında 25 yıllık deneyimimizle profesyonel hizmet sunuyoruz.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Hızlı Linkler</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Ana Sayfa</a></li>
+                        <li><a href="services.html" class="text-light text-decoration-none">Hizmetlerimiz</a></li>
+                        <li><a href="projects.html" class="text-light text-decoration-none">Projelerimiz</a></li>
+                        <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Hizmetlerimiz</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">Halihazır Harita</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">İmar Uygulaması</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">3B Modelleme</a></li>
+                        <li><a href="service-detail.html" class="text-light text-decoration-none">Arsa Geliştirme</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">İletişim Bilgileri</h6>
+                    <div class="text-light">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Kızılay Mh. Atatürk Blv. No:123 Çankaya/Ankara</p>
+                        <p><i class="fas fa-phone me-2"></i>+90 312 123 45 67</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@geoplan.com.tr</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light">&copy; 2024 GeoPlan Mühendislik. Tüm hakları saklıdır.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Gizlilik Politikası</a>
+                    <a href="#" class="text-light text-decoration-none">Kullanım Şartları</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle" style="display: none; z-index: 1000;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Additional CSS for Projects Page -->
+    <style>
+        .project-filters .btn {
+            transition: var(--transition);
+        }
+        
+        .project-filters .btn.active {
+            background: var(--gradient-primary);
+            border-color: var(--primary-color);
+            color: white;
+        }
+        
+        .project-meta {
+            margin-bottom: 1rem;
+        }
+        
+        .project-stats {
+            font-size: 0.85rem;
+        }
+        
+        .stat-item {
+            padding: 1rem;
+        }
+        
+        .pagination .page-link {
+            border-radius: 8px;
+            margin: 0 2px;
+            border: none;
+            color: var(--primary-color);
+        }
+        
+        .pagination .page-item.active .page-link {
+            background: var(--gradient-primary);
+            border-color: var(--primary-color);
+        }
+        
+        .pagination .page-link:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
+</body>
+</html>
