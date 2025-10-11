@@ -1,4 +1,4 @@
-<section class="mt-5" style="background: linear-gradient(135deg, #005F99 0%, #00B7C2 100%);">
+<section class="breadcrumb-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center text-white">

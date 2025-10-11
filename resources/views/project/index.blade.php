@@ -3,7 +3,6 @@
 @section('description', __('front/project.page_description'))
 @section('content')
     @include('layouts.breadcrumb')
-    <!-- Project Filters -->
     <section class="py-4 bg-light">
         <div class="container">
             <div class="row">
