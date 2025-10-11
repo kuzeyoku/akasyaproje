@@ -2,7 +2,9 @@
 
 return [
     'page_title' => 'Hizmetlerimiz',
+    'meta_title' => 'Hizmetlerimiz',
     'page_description' => 'Harita mühendisliği alanında 25 yıllık deneyimimizle profesyonel hizmetler sunuyoruz.',
+    'meta_description' => 'Harita mühendisliği alanında 25 yıllık deneyimimizle profesyonel hizmetler sunuyoruz.',
     'txt1' => 'Neden Akasya Proje?',
     'txt2' => '25 yıllık deneyimimiz ve modern teknolojilerimizle fark yaratıyoruz.',
     'txt3' => '25 Yıl Deneyim',

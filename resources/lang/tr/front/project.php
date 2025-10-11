@@ -2,7 +2,9 @@
 
 return [
     'page_title' => 'Projelerimiz',
+    'meta_title' => 'Projelerimiz',
     "page_description" => "25 yıllık deneyimimizle gerçekleştirdiğimiz başarılı projeler ve devam eden çalışmalarımız.",
+    "meta_description" => "25 yıllık deneyimimizle gerçekleştirdiğimiz başarılı projeler ve devam eden çalışmalarımız.",
     'txt1' => 'Tüm Projeler',
     'txt2' => 'Proje Detayları',
     'txt3' => '250+',
