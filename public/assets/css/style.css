@@ -106,6 +106,7 @@ section {
 
 .breadcrumb-section {
     background: var(--gradient-primary);
+    margin-top: 5rem;
 }
 
 .breadcrumb {
@@ -116,10 +117,6 @@ section {
 .breadcrumb-item a {
     color: var(--primary-color);
     text-decoration: none;
-}
-
-.mt-5 {
-    margin-top: 5rem !important;
 }
 
 /* ========== Navigation ========== */
