@@ -10,7 +10,7 @@ return [
     'txt7' => 'Hızlı Teslimat',
     'txt8' => 'Zamanında proje teslimi',
     'txt9' => 'Güvenilir Hizmet',
-    'txt10' => "%100 müşteri memnuniyeti",
-    'txt11' => "Projelerimizi İnceleyin",
-    'txt12' => ' İletişime Geç'
+    'txt10' => '%100 müşteri memnuniyeti',
+    'txt11' => 'Projelerimizi İnceleyin',
+    'txt12' => ' İletişime Geç',
 ];

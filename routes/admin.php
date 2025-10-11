@@ -82,17 +82,17 @@ Route::prefix($adminPrefix)->name('admin.')->group(function () {
         });
 
         Route::prefix(ModuleEnum::Language->route())->controller(LanguageController::class)->name(ModuleEnum::Language->routeName())->group(function () {
-            Route::put("/{language}/status-update", "statusUpdate")->name("status_update");
-            Route::match(["get", "post"], "/{language}/files", "files")->name("files");
-            Route::put("/{language}/updateFileContent", "updateFileContent")->name("updateFileContent");
+            Route::put('/{language}/status-update', 'statusUpdate')->name('status_update');
+            Route::match(['get', 'post'], '/{language}/files', 'files')->name('files');
+            Route::put('/{language}/updateFileContent', 'updateFileContent')->name('updateFileContent');
         });
 
         Route::prefix(ModuleEnum::Service->route())->controller(ServiceController::class)->name(ModuleEnum::Service->routeName())->group(function () {
             Route::put('/{service}/status-update', 'statusUpdate')->name('status_update');
             Route::get('/{service}/image', 'image')->name('image');
             Route::get('/{service}/file', 'file')->name('file');
-            Route::post("/{service}/storeImage", "storeImage")->name("storeImage");
-            Route::delete("/{service}/destroyAllImages", "destroyAllImages")->name("destroyAllImages");
+            Route::post('/{service}/storeImage', 'storeImage')->name('storeImage');
+            Route::delete('/{service}/destroyAllImages', 'destroyAllImages')->name('destroyAllImages');
         });
 
         Route::prefix(ModuleEnum::Reference->route())->controller(ReferenceController::class)->name(ModuleEnum::Reference->routeName())->group(function () {

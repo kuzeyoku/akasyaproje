@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Project;
-use App\Models\Category;
 use App\Enums\ModuleEnum;
-use App\Services\SeoService;
+use App\Models\Category;
+use App\Models\Project;
 use App\Services\CacheService;
+use App\Services\SeoService;
 
 class ProjectController extends Controller
 {

@@ -15,14 +15,14 @@ enum StatusEnum: string
     case Answered = 'answered';
     case Yes = 'yes';
     case No = 'no';
-    case Plan = "planning";
-    case Start = "start";
-    case Continue = "continue";
-    case Finish = "finish";
+    case Plan = 'planning';
+    case Start = 'start';
+    case Continue = 'continue';
+    case Finish = 'finish';
 
     public function title(): string
     {
-        return __('admin/status.' . $this->value);
+        return __('admin/status.'.$this->value);
     }
 
     /**
@@ -38,10 +38,10 @@ enum StatusEnum: string
             self::Read => 'linesuccess',
             self::Unread => 'linedanger',
             self::Answered => 'lineinfo',
-            self::Plan => "danger",
-            self::Start => "primary",
-            self::Continue => "warning",
-            self::Finish => "success",
+            self::Plan => 'danger',
+            self::Start => 'primary',
+            self::Continue => 'warning',
+            self::Finish => 'success',
             default => throw new Exception('Unexpected match value'),
         };
     }
@@ -93,8 +93,8 @@ enum StatusEnum: string
             'answered' => StatusEnum::Answered,
             'plan' => StatusEnum::Plan,
             'start' => StatusEnum::Start,
-            "continue" => StatusEnum::Continue ,
-            "finish" => StatusEnum::Finish,
+            'continue' => StatusEnum::Continue,
+            'finish' => StatusEnum::Finish,
         ];
 
         if (array_key_exists($value, $statusList)) {
@@ -143,8 +143,8 @@ enum StatusEnum: string
         return [
             StatusEnum::Plan->value => StatusEnum::Plan->title(),
             StatusEnum::Start->value => StatusEnum::Start->title(),
-            StatusEnum::Continue ->value => StatusEnum::Continue ->title(),
-            StatusEnum::Finish->value => StatusEnum::Finish->title()
+            StatusEnum::Continue->value => StatusEnum::Continue->title(),
+            StatusEnum::Finish->value => StatusEnum::Finish->title(),
         ];
     }
 }

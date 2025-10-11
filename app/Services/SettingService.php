@@ -5,9 +5,7 @@ namespace App\Services;
 use App\Enums\StatusEnum;
 use App\Models\Setting;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Log;
 use InvalidArgumentException;
-use Schema;
 
 class SettingService
 {
@@ -17,10 +15,6 @@ class SettingService
 
     public static function getAll(): Collection
     {
-        if (! self::hasSettingsTable()) {
-            return collect();
-        }
-
         return CacheService::remember(self::CACHE_PREFIX, function () {
             return Setting::all();
         });
@@ -77,17 +71,6 @@ class SettingService
         $status = self::get($category, 'status', StatusEnum::Passive->value);
 
         return $status === StatusEnum::Active->value;
-    }
-
-    public static function hasSettingsTable(): bool
-    {
-        try {
-            return Schema::hasTable('settings');
-        } catch (\Exception $e) {
-            Log::warning('Ayarlar tablosunun varlığı kontrol edilemedi.', ['error' => $e->getMessage()]);
-
-            return false;
-        }
     }
 
     private static function buildCacheKey(string $category, string $key): string

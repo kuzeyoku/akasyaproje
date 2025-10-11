@@ -1,7 +1,7 @@
 <?php
 
 return [
-    "meta_title" => "İletişim",
+    'meta_title' => 'İletişim',
     'title' => 'İletişim',
     'txt1' => 'İletişim Bilgilerimiz',
     'txt2' => 'Mesaj Gönderin',

@@ -67,12 +67,12 @@ class MediaService
 
     private function validateFile($file): void
     {
-        if (!$file instanceof UploadedFile) {
+        if (! $file instanceof UploadedFile) {
             throw new Exception('Geçersiz dosya türü');
         }
 
-        if (!$file->isValid()) {
-            throw new Exception('Dosya doğrulanamadı: ' . $file->getErrorMessage());
+        if (! $file->isValid()) {
+            throw new Exception('Dosya doğrulanamadı: '.$file->getErrorMessage());
         }
     }
 
@@ -87,7 +87,7 @@ class MediaService
 
     private function hasMediaSupport($item): void
     {
-        if (!$item instanceof HasMedia) {
+        if (! $item instanceof HasMedia) {
             throw new Exception('Model medya desteğine sahip değil.');
         }
     }

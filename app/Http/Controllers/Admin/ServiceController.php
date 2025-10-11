@@ -73,7 +73,7 @@ class ServiceController extends Controller
 
     public function image(Service $service)
     {
-        return view(themeView("admin", "{$this->service->folder()}.image"), compact("service"));
+        return view(themeView('admin', "{$this->service->folder()}.image"), compact('service'));
     }
 
     public function storeImage(Request $request, Service $service): object

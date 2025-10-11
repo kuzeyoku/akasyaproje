@@ -56,7 +56,7 @@ class Project extends BaseModel implements HasMedia
         $result = [];
         if (array_key_exists($this->locale, $this->features)) {
             $featuresLine = array_filter(explode("\r\n", $this->features[$this->locale]), function ($item) {
-                return !empty($item);
+                return ! empty($item);
             });
             array_map(function ($item) use (&$result) {
                 [$key, $value] = explode(':', $item);
@@ -70,6 +70,7 @@ class Project extends BaseModel implements HasMedia
     public function getProcessStatusBadgeAttribute(): string
     {
         $enum = StatusEnum::fromValue($this->process_status);
+
         return "<span class='badge bg-{$enum->color()}'>{$enum->title()}</span>";
     }
 
@@ -77,7 +78,7 @@ class Project extends BaseModel implements HasMedia
     {
         parent::boot();
         static::creating(function ($model) {
-            $model->slug = Str::slug(request('title.' . app()->getFallbackLocale()));
+            $model->slug = Str::slug(request('title.'.app()->getFallbackLocale()));
         });
     }
 }

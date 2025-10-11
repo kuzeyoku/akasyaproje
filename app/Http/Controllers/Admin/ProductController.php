@@ -8,7 +8,6 @@ use App\Http\Requests\Product\ImageProductRequest;
 use App\Http\Requests\Product\StoreProductRequest;
 use App\Http\Requests\Product\UpdateProductRequest;
 use App\Models\Product;
-use App\Services\Admin\FileService;
 use App\Services\Admin\ProductService;
 use Illuminate\Support\Facades\View;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;

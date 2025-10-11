@@ -63,7 +63,8 @@ class ProjectController extends Controller
     public function create()
     {
         $categories = $this->service->getCategories();
-        return view(themeView('admin', "{$this->service->folder()}.create"), compact("categories"));
+
+        return view(themeView('admin', "{$this->service->folder()}.create"), compact('categories'));
     }
 
     public function store(StoreProjectRequest $request)
@@ -84,7 +85,8 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
         $categories = $this->service->getCategories();
-        return view(themeView('admin', "{$this->service->folder()}.edit"), compact('project', "categories"));
+
+        return view(themeView('admin', "{$this->service->folder()}.edit"), compact('project', 'categories'));
     }
 
     public function update(UpdateProjectRequest $request, Project $project)

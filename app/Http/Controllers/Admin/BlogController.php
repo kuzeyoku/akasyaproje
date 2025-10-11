@@ -31,6 +31,7 @@ class BlogController extends Controller
     public function create()
     {
         $categories = $this->service->getCategories();
+
         return view(themeView('admin', "{$this->service->folder()}.create"), compact('categories'));
     }
 
@@ -52,7 +53,8 @@ class BlogController extends Controller
     public function edit(Blog $blog)
     {
         $categories = $this->service->getCategories();
-        return view(themeView('admin', "{$this->service->folder()}.edit"), compact('blog', "categories"));
+
+        return view(themeView('admin', "{$this->service->folder()}.edit"), compact('blog', 'categories'));
     }
 
     public function update(UpdateBlogRequest $request, Blog $blog)

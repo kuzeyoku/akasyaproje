@@ -22,7 +22,7 @@ class StoreProjectRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title.' . app()->getFallbackLocale() => 'required',
+            'title.'.app()->getFallbackLocale() => 'required',
             'title.*' => 'nullable',
             'description.*' => 'nullable',
             'features.*' => 'nullable',
@@ -31,7 +31,7 @@ class StoreProjectRequest extends FormRequest
             'order' => 'required|numeric|min:0',
             'status' => 'required',
             'category_id' => 'nullable|numeric',
-            "process_status" => 'required',
+            'process_status' => 'required',
             'image' => 'image|mimes:png,jpeg,jpg,gif',
         ];
     }
@@ -39,7 +39,7 @@ class StoreProjectRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'title.' . app()->getFallbackLocale() => __("admin/{$this->folder}.form_title"),
+            'title.'.app()->getFallbackLocale() => __("admin/{$this->folder}.form_title"),
             'title.*' => __("admin/{$this->folder}.form_title"),
             'description.*' => __("admin/{$this->folder}.form_description"),
             'features.*' => __("admin/{$this->folder}.form_features"),
@@ -47,7 +47,7 @@ class StoreProjectRequest extends FormRequest
             'model3D' => __("admin/{$this->folder}.form_3d"),
             'order' => __('admin/general.order'),
             'status' => __('admin/general.status'),
-            'process_status' => __("admin/project.form_process_status"),
+            'process_status' => __('admin/project.form_process_status'),
             'category_id' => __("admin/{$this->folder}.form_category"),
             'image' => __("admin/{$this->folder}.form_image"),
         ];

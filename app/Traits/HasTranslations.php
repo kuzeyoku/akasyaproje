@@ -43,7 +43,7 @@ trait HasTranslations
 
     public function getTagsToArrayAttribute(): array
     {
-        $tags = $this->translate->where('lang', app()->getLocale())->value("tags");
+        $tags = $this->translate->where('lang', app()->getLocale())->value('tags');
 
         return array_filter(explode(',', $tags ?? ''));
     }

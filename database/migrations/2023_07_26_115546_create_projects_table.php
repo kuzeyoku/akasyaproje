@@ -5,7 +5,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
+return new class extends Migration
+{
     /**
      * Run the migrations.
      */
@@ -15,7 +16,7 @@ return new class extends Migration {
             $table->id();
             $table->string('slug', 255);
             $table->integer('category_id')->nullable()->default(0);
-            $table->enum("process_status", array_keys(StatusEnum::getProcessStatus()))->default(StatusEnum::Plan->value);
+            $table->enum('process_status', array_keys(StatusEnum::getProcessStatus()))->default(StatusEnum::Plan->value);
             $table->string('video', 255)->nullable();
             $table->string('model3D', 255)->nullable();
             $table->integer('order')->default(0);

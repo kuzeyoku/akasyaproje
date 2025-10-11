@@ -61,8 +61,10 @@ class BaseService
 
     public function delete(Model $item): ?bool
     {
-        if ($item instanceof HasMedia)
+        if ($item instanceof HasMedia) {
             $this->mediaService->clearMedia($item);
+        }
+
         return $item->delete();
     }
 
@@ -73,7 +75,8 @@ class BaseService
 
     protected function imageUpload(Model $item, array $data)
     {
-        if ($item instanceof HasMedia)
+        if ($item instanceof HasMedia) {
             $this->mediaService->handleUploads($item, $data);
+        }
     }
 }

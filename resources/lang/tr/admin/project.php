@@ -17,7 +17,7 @@ return [
     'form_features' => 'Proje Özellikleri',
     'form_features_placeholder' => "Örnek: (Satır İle Ayırın)\n\nFirma : RhpSoft\nBütçe : 1.000.000 $",
     'form_category' => 'Kategori',
-    "form_process_status" => "Süreç Durumu",
+    'form_process_status' => 'Süreç Durumu',
     'form_status' => 'Durum',
     'form_brochure' => 'Broşür',
     'form_video' => 'Video',

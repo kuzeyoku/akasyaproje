@@ -82,7 +82,7 @@ enum ModuleEnum: string
 
     public function routeName(): string
     {
-        return $this->route() . '.';
+        return $this->route().'.';
     }
 
     public function folder(): string

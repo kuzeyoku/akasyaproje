@@ -22,6 +22,7 @@ class BlogController extends Controller
     {
         $this->seoService->module(ModuleEnum::Blog);
         $data = $this->blogService->getIndexData();
+
         return view(ModuleEnum::Blog->folder().'.index', $data);
     }
 

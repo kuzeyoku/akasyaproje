@@ -14,10 +14,10 @@ class ServiceController extends Controller
     public function index()
     {
         SeoService::module(ModuleEnum::Service);
-        $cacheKey = ModuleEnum::Service->value . '_index';
+        $cacheKey = ModuleEnum::Service->value.'_index';
         $services = Service::active()->order()->get();
         $references = Reference::active()->order()->get();
-        $categories = CacheService::cacheQuery($cacheKey, fn() => Category::module(ModuleEnum::Service)->active()->order()->get());
+        $categories = CacheService::cacheQuery($cacheKey, fn () => Category::module(ModuleEnum::Service)->active()->order()->get());
 
         return view('service.index', compact('categories', 'services', 'references'));
     }
@@ -25,10 +25,10 @@ class ServiceController extends Controller
     public function show(Service $service)
     {
         SeoService::show($service);
-        $cacheKey = ModuleEnum::Service->value . '_' . $service->id . '_other';
+        $cacheKey = ModuleEnum::Service->value.'_'.$service->id.'_other';
         $otherServices = Service::active()->exclude($service->id)->order()->get();
         $references = Reference::active()->get();
 
-        return view('service.show', compact('service', 'otherServices',"references"));
+        return view('service.show', compact('service', 'otherServices', 'references'));
     }
 }

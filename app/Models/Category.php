@@ -29,7 +29,7 @@ class Category extends BaseModel implements HasMedia
 
     public function scopeModule($query, $module)
     {
-        return $query->where("module", $module);
+        return $query->where('module', $module);
     }
 
     public function subCategories(): HasMany
@@ -61,7 +61,7 @@ class Category extends BaseModel implements HasMedia
     {
         parent::boot();
         self::creating(function ($category) {
-            $category->slug = Str::slug(request('title.' . app()->getFallbackLocale()));
+            $category->slug = Str::slug(request('title.'.app()->getFallbackLocale()));
         });
         self::deleting(function ($category) {
             $category->products()->update(['category_id' => 0]);

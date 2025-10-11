@@ -25,8 +25,9 @@ class CategoryService extends BaseService
 
     public static function getModuleCategories(ModuleEnum $module, $arr = false)
     {
-        $cacheKey = CacheService::buildLocalizedKey($module->value . '_categories');
-        $categories = CacheService::cacheQuery($cacheKey, fn() => Category::module($module)->active()->get());
+        $cacheKey = CacheService::buildLocalizedKey($module->value.'_categories');
+        $categories = CacheService::cacheQuery($cacheKey, fn () => Category::module($module)->active()->get());
+
         return $arr ? $categories->pluck('title', 'id')->toArray() : $categories;
     }
 
@@ -34,6 +35,6 @@ class CategoryService extends BaseService
     {
         $cacheKey = 'categories_toArray';
 
-        return CacheService::cacheQuery($cacheKey, fn() => Category::all()->pluck('title', 'id')->toArray());
+        return CacheService::cacheQuery($cacheKey, fn () => Category::all()->pluck('title', 'id')->toArray());
     }
 }

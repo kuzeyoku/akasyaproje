@@ -11,8 +11,8 @@ return [
     'answered' => 'Cevaplandı',
     'yes' => 'Evet',
     'no' => 'Hayır',
-    "plan" => "Planlama",
-    "start" => "Başladı",
-    "continue" => "Devam Ediyor",
-    "finish" => "Tamamlandı"
+    'plan' => 'Planlama',
+    'start' => 'Başladı',
+    'continue' => 'Devam Ediyor',
+    'finish' => 'Tamamlandı',
 ];
