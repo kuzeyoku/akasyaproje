@@ -1670,3 +1670,138 @@ footer h6 {
         flex-direction: column;
     }
 }
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #003d5c 0%, #0066cc 100%);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    transform: translateY(100%);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-top: 3px solid #00b4d8;
+}
+
+.cookie-banner.show {
+    transform: translateY(0);
+}
+
+.cookie-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cookie-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cookie-icon {
+    font-size: 2rem;
+    color: #00ccdd;
+    margin-right: 15px;
+    float: left;
+}
+
+.cookie-message {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.cookie-message strong {
+    color: #00ccdd;
+}
+
+.cookie-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-accept {
+    background: linear-gradient(45deg, #00b4d8, #00ccdd);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 204, 221, 0.3);
+}
+
+.btn-accept:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 204, 221, 0.4);
+}
+
+.btn-decline {
+    background: transparent;
+    color: #b8e6ff;
+    border: 2px solid #b8e6ff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-decline:hover {
+    background: #b8e6ff;
+    color: #003d5c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cookie-icon {
+        float: none;
+        display: block;
+        margin: 0 0 15px 0;
+    }
+
+    .cookie-actions {
+        width: 100%;
+        justify-content: center;
+    }
+}
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    z-index: 10001;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification.success {
+    background: linear-gradient(45deg, #28a745, #34ce57);
+}
+
+.notification.info {
+    background: linear-gradient(45deg, #17a2b8, #20c997);
+}

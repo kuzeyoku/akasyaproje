@@ -1,75 +1,75 @@
 // Main JavaScript for GeoPlan Engineering Website
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
     // Initialize AOS (Animate On Scroll)
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener("DOMContentLoaded", function () {
         AOS.init({
             duration: 800,
-            easing: 'ease-out-cubic',
+            easing: "ease-out-cubic",
             once: true,
-            offset: 100
+            offset: 100,
         });
     });
 
     // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
+    window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
         if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
+            navbar.classList.add("scrolled");
         } else {
-            navbar.classList.remove('scrolled');
+            navbar.classList.remove("scrolled");
         }
     });
 
     // Back to top button
-    const backToTopButton = document.getElementById('backToTop');
+    const backToTopButton = document.getElementById("backToTop");
 
     if (backToTopButton) {
-        window.addEventListener('scroll', function() {
+        window.addEventListener("scroll", function () {
             if (window.scrollY > 300) {
-                backToTopButton.style.display = 'flex';
+                backToTopButton.style.display = "flex";
             } else {
-                backToTopButton.style.display = 'none';
+                backToTopButton.style.display = "none";
             }
         });
 
-        backToTopButton.addEventListener('click', function(e) {
+        backToTopButton.addEventListener("click", function (e) {
             e.preventDefault();
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth'
+                behavior: "smooth",
             });
         });
     }
 
     // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(this.getAttribute("href"));
             if (target) {
                 const offsetTop = target.offsetTop - 80; // Account for fixed navbar
                 window.scrollTo({
                     top: offsetTop,
-                    behavior: 'smooth'
+                    behavior: "smooth",
                 });
             }
         });
     });
 
     // Enhanced carousel auto-play with pause on hover
-    const carousel = document.querySelector('#heroCarousel');
+    const carousel = document.querySelector("#heroCarousel");
     if (carousel) {
         const carouselInstance = new bootstrap.Carousel(carousel, {
             interval: 5000,
-            ride: 'carousel',
-            pause: 'hover'
+            ride: "carousel",
+            pause: "hover",
         });
 
         // Pause carousel when user interacts with indicators or controls
-        carousel.addEventListener('slide.bs.carousel', function() {
+        carousel.addEventListener("slide.bs.carousel", function () {
             carouselInstance.pause();
             setTimeout(() => {
                 carouselInstance.cycle();
@@ -78,42 +78,42 @@
     }
 
     // Service card hover effects
-    document.querySelectorAll('.service-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px)';
+    document.querySelectorAll(".service-card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-10px)";
         });
 
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
+        card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0)";
         });
     });
 
     // Project card hover effects
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px)';
+    document.querySelectorAll(".project-card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-5px)";
         });
 
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
+        card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0)";
         });
     });
 
     // Blog card hover effects
-    document.querySelectorAll('.blog-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px)';
+    document.querySelectorAll(".blog-card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-5px)";
         });
 
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
+        card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0)";
         });
     });
 
     // Contact form handling (for contact page)
-    const contactForm = document.getElementById('contactForm');
+    const contactForm = document.getElementById("contactForm");
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
             // Get form data
@@ -122,105 +122,130 @@
 
             // Basic validation
             if (!data.name || !data.email || !data.subject || !data.message) {
-                showAlert('Lütfen tüm alanları doldurun.', 'danger');
+                showAlert("Lütfen tüm alanları doldurun.", "danger");
                 return;
             }
 
             if (!isValidEmail(data.email)) {
-                showAlert('Lütfen geçerli bir e-posta adresi girin.', 'danger');
+                showAlert("Lütfen geçerli bir e-posta adresi girin.", "danger");
                 return;
             }
 
             // Simulate form submission
-            showAlert('Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.', 'success');
+            showAlert(
+                "Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.",
+                "success"
+            );
             this.reset();
         });
     }
 
     // Quote form handling (for services page)
-    const quoteForm = document.getElementById('quoteForm');
+    const quoteForm = document.getElementById("quoteForm");
     if (quoteForm) {
-        quoteForm.addEventListener('submit', function(e) {
+        quoteForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
 
-            if (!data.name || !data.email || !data.phone || !data.service || !data.description) {
-                showAlert('Lütfen tüm alanları doldurun.', 'danger');
+            if (
+                !data.name ||
+                !data.email ||
+                !data.phone ||
+                !data.service ||
+                !data.description
+            ) {
+                showAlert("Lütfen tüm alanları doldurun.", "danger");
                 return;
             }
 
             if (!isValidEmail(data.email)) {
-                showAlert('Lütfen geçerli bir e-posta adresi girin.', 'danger');
+                showAlert("Lütfen geçerli bir e-posta adresi girin.", "danger");
                 return;
             }
 
-            showAlert('Teklif talebiniz alındı. 24 saat içinde size detaylı teklif sunacağız.', 'success');
+            showAlert(
+                "Teklif talebiniz alındı. 24 saat içinde size detaylı teklif sunacağız.",
+                "success"
+            );
             this.reset();
         });
     }
 
     // Newsletter subscription (if exists)
-    const newsletterForm = document.getElementById('newsletterForm');
+    const newsletterForm = document.getElementById("newsletterForm");
     if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
+        newsletterForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
             const email = this.querySelector('input[type="email"]').value;
 
             if (!isValidEmail(email)) {
-                showAlert('Lütfen geçerli bir e-posta adresi girin.', 'danger');
+                showAlert("Lütfen geçerli bir e-posta adresi girin.", "danger");
                 return;
             }
 
-            showAlert('Bültenimize başarıyla abone oldunuz!', 'success');
+            showAlert("Bültenimize başarıyla abone oldunuz!", "success");
             this.reset();
         });
     }
 
     // Blog search functionality (for blog page)
-    const blogSearch = document.getElementById('blogSearch');
+    const blogSearch = document.getElementById("blogSearch");
     if (blogSearch) {
-        blogSearch.addEventListener('input', function() {
+        blogSearch.addEventListener("input", function () {
             const searchTerm = this.value.toLowerCase();
-            const blogCards = document.querySelectorAll('.blog-card');
+            const blogCards = document.querySelectorAll(".blog-card");
 
-            blogCards.forEach(card => {
-                const title = card.querySelector('h5').textContent.toLowerCase();
-                const content = card.querySelector('p').textContent.toLowerCase();
+            blogCards.forEach((card) => {
+                const title = card
+                    .querySelector("h5")
+                    .textContent.toLowerCase();
+                const content = card
+                    .querySelector("p")
+                    .textContent.toLowerCase();
 
-                if (title.includes(searchTerm) || content.includes(searchTerm)) {
-                    card.closest('.col-lg-4, .col-md-6').style.display = 'block';
+                if (
+                    title.includes(searchTerm) ||
+                    content.includes(searchTerm)
+                ) {
+                    card.closest(".col-lg-4, .col-md-6").style.display =
+                        "block";
                 } else {
-                    card.closest('.col-lg-4, .col-md-6').style.display = 'none';
+                    card.closest(".col-lg-4, .col-md-6").style.display = "none";
                 }
             });
         });
     }
 
     // Project filter functionality (for projects page)
-    const projectFilters = document.querySelectorAll('[data-filter]');
+    const projectFilters = document.querySelectorAll("[data-filter]");
     if (projectFilters.length > 0) {
-        projectFilters.forEach(filter => {
-            filter.addEventListener('click', function(e) {
+        projectFilters.forEach((filter) => {
+            filter.addEventListener("click", function (e) {
                 e.preventDefault();
 
                 // Remove active class from all filters
-                projectFilters.forEach(f => f.classList.remove('active'));
+                projectFilters.forEach((f) => f.classList.remove("active"));
                 // Add active class to clicked filter
-                this.classList.add('active');
+                this.classList.add("active");
 
-                const filterValue = this.getAttribute('data-filter');
-                const projectCards = document.querySelectorAll('.project-card');
+                const filterValue = this.getAttribute("data-filter");
+                const projectCards = document.querySelectorAll(".project-card");
 
-                projectCards.forEach(card => {
-                    const cardStatus = card.querySelector('.project-status');
-                    const cardCategory = cardStatus ? cardStatus.id : '';
-                    if (filterValue === 'all' || cardCategory.includes(filterValue)) {
-                        card.closest('.col-lg-4, .col-md-6').style.display = 'block';
+                projectCards.forEach((card) => {
+                    const cardStatus = card.querySelector(".project-status");
+                    const cardCategory = cardStatus ? cardStatus.id : "";
+                    if (
+                        filterValue === "all" ||
+                        cardCategory.includes(filterValue)
+                    ) {
+                        card.closest(".col-lg-4, .col-md-6").style.display =
+                            "block";
                     } else {
-                        card.closest('.col-lg-4, .col-md-6').style.display = 'none';
+                        card.closest(".col-lg-4, .col-md-6").style.display =
+                            "none";
                     }
                 });
             });
@@ -228,39 +253,42 @@
     }
 
     // 3D Model viewer toggle (for project detail page)
-    const modelViewerBtn = document.getElementById('modelViewerBtn');
-    const modelViewer = document.getElementById('modelViewer');
+    const modelViewerBtn = document.getElementById("modelViewerBtn");
+    const modelViewer = document.getElementById("modelViewer");
 
     if (modelViewerBtn && modelViewer) {
-        modelViewerBtn.addEventListener('click', function() {
-            if (modelViewer.style.display === 'none' || !modelViewer.style.display) {
-                modelViewer.style.display = 'block';
-                this.textContent = 'Modeli Gizle';
-                this.classList.remove('btn-primary');
-                this.classList.add('btn-secondary');
+        modelViewerBtn.addEventListener("click", function () {
+            if (
+                modelViewer.style.display === "none" ||
+                !modelViewer.style.display
+            ) {
+                modelViewer.style.display = "block";
+                this.textContent = "Modeli Gizle";
+                this.classList.remove("btn-primary");
+                this.classList.add("btn-secondary");
             } else {
-                modelViewer.style.display = 'none';
-                this.textContent = 'Modeli Görüntüle';
-                this.classList.remove('btn-secondary');
-                this.classList.add('btn-primary');
+                modelViewer.style.display = "none";
+                this.textContent = "Modeli Görüntüle";
+                this.classList.remove("btn-secondary");
+                this.classList.add("btn-primary");
             }
         });
     }
 
     // Lazy loading for images
-    if ('IntersectionObserver' in window) {
+    if ("IntersectionObserver" in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
                     img.src = img.dataset.src;
-                    img.classList.remove('lazy');
+                    img.classList.remove("lazy");
                     imageObserver.unobserve(img);
                 }
             });
         });
 
-        document.querySelectorAll('img[data-src]').forEach(img => {
+        document.querySelectorAll("img[data-src]").forEach((img) => {
             imageObserver.observe(img);
         });
     }
@@ -271,15 +299,16 @@
         return emailRegex.test(email);
     }
 
-    function showAlert(message, type = 'info') {
+    function showAlert(message, type = "info") {
         // Remove existing alerts
-        const existingAlerts = document.querySelectorAll('.custom-alert');
-        existingAlerts.forEach(alert => alert.remove());
+        const existingAlerts = document.querySelectorAll(".custom-alert");
+        existingAlerts.forEach((alert) => alert.remove());
 
         // Create new alert
-        const alertDiv = document.createElement('div');
+        const alertDiv = document.createElement("div");
         alertDiv.className = `alert alert-${type} alert-dismissible fade show custom-alert`;
-        alertDiv.style.cssText = 'position: fixed; top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+        alertDiv.style.cssText =
+            "position: fixed; top: 20px; right: 20px; z-index: 9999; min-width: 300px;";
         alertDiv.innerHTML = `
             ${message}
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
@@ -297,19 +326,22 @@
 
     // Loading animation for page elements
     function initLoadingAnimations() {
-        const elements = document.querySelectorAll('.loading');
+        const elements = document.querySelectorAll(".loading");
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('loaded');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("loaded");
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+            }
+        );
 
-        elements.forEach(element => {
+        elements.forEach((element) => {
             observer.observe(element);
         });
     }
@@ -318,23 +350,26 @@
     initLoadingAnimations();
 
     // Mobile menu enhancements
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
 
     if (navbarToggler && navbarCollapse) {
         // Close mobile menu when clicking on a link
-        navbarCollapse.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navbarCollapse.classList.contains('show')) {
+        navbarCollapse.querySelectorAll(".nav-link").forEach((link) => {
+            link.addEventListener("click", () => {
+                if (navbarCollapse.classList.contains("show")) {
                     navbarToggler.click();
                 }
             });
         });
 
         // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navbarToggler.contains(e.target) && !navbarCollapse.contains(e.target)) {
-                if (navbarCollapse.classList.contains('show')) {
+        document.addEventListener("click", (e) => {
+            if (
+                !navbarToggler.contains(e.target) &&
+                !navbarCollapse.contains(e.target)
+            ) {
+                if (navbarCollapse.classList.contains("show")) {
                     navbarToggler.click();
                 }
             }
@@ -356,24 +391,120 @@
 
     // Apply debounce to scroll events
     const debouncedScrollHandler = debounce(() => {
-        const navbar = document.querySelector('.navbar');
-        const backToTopButton = document.getElementById('backToTop');
+        const navbar = document.querySelector(".navbar");
+        const backToTopButton = document.getElementById("backToTop");
 
         if (window.scrollY > 50) {
-            navbar?.classList.add('scrolled');
+            navbar?.classList.add("scrolled");
         } else {
-            navbar?.classList.remove('scrolled');
+            navbar?.classList.remove("scrolled");
         }
 
         if (backToTopButton) {
             if (window.scrollY > 300) {
-                backToTopButton.style.display = 'flex';
+                backToTopButton.style.display = "flex";
             } else {
-                backToTopButton.style.display = 'none';
+                backToTopButton.style.display = "none";
             }
         }
     }, 10);
 
-    window.addEventListener('scroll', debouncedScrollHandler);
-
+    window.addEventListener("scroll", debouncedScrollHandler);
 })();
+
+function showCookieBanner() {
+    const banner = document.getElementById("cookieBanner");
+    banner.classList.add("show");
+}
+
+function hideCookieBanner() {
+    const banner = document.getElementById("cookieBanner");
+    banner.classList.remove("show");
+}
+
+function acceptCookies() {
+    // Tüm çerezleri kabul et
+    setCookie("cookieConsent", "accepted", 365);
+    setCookie("analyticsEnabled", "true", 365);
+    setCookie("marketingEnabled", "true", 365);
+    setCookie("functionalEnabled", "true", 365);
+
+    hideCookieBanner();
+    showNotification(
+        "Çerezler kabul edildi! Tüm site özellikleri aktif.",
+        "success"
+    );
+}
+
+function declineCookies() {
+    // Sadece zorunlu çerezler
+    setCookie("cookieConsent", "declined", 365);
+    setCookie("analyticsEnabled", "false", 365);
+    setCookie("marketingEnabled", "false", 365);
+    setCookie("functionalEnabled", "false", 365);
+
+    hideCookieBanner();
+    showNotification(
+        "Çerezler reddedildi. Sadece zorunlu çerezler aktif.",
+        "info"
+    );
+}
+
+// Helper functions
+function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie =
+        name + "=" + value + ";expires=" + expires.toUTCString() + ";path=/";
+}
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(";");
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function showNotification(message, type) {
+    const notification = document.createElement("div");
+    notification.className = `notification ${type}`;
+    notification.innerHTML = `
+                <i class="fas fa-${
+                    type === "success" ? "check" : "info"
+                }-circle me-2"></i>
+                ${message}
+            `;
+
+    document.body.appendChild(notification);
+
+    // Animasyonla göster
+    setTimeout(() => {
+        notification.classList.add("show");
+    }, 100);
+
+    // 4 saniye sonra kaldır
+    setTimeout(() => {
+        notification.classList.remove("show");
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 4000);
+}
+
+// Sayfa yüklendiğinde kontrol et
+document.addEventListener("DOMContentLoaded", function () {
+    const consent = getCookie("cookieConsent");
+    if (!consent) {
+        // 2 saniye sonra göster
+        setTimeout(showCookieBanner, 2000);
+    } else {
+        console.log("Cookie consent durumu:", consent);
+        console.log("Analytics:", getCookie("analyticsEnabled"));
+        console.log("Marketing:", getCookie("marketingEnabled"));
+        console.log("Functional:", getCookie("functionalEnabled"));
+    }
+});
