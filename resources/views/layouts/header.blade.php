@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     @foreach ($menus as $menu)
-                        @if ($menu->parent_id === 0)
+                        @if ($menu->parent_id == 0)
                             @if ($menu->subMenu->isNotEmpty())
                                 @include('layouts.menu', ['menu' => $menu])
                             @else
