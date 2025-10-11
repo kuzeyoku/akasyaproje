@@ -233,9 +233,8 @@
         </div>
     </section> --}}
 @endsection
+@include('common.alert')
 @push('script')
-    <script src="{{ asset('assets/common/js/sweetalert.js') }}"></script>
-    @include('common.alert')
     <script type="text/javascript">
         // Initialize Leaflet map
         document.addEventListener('DOMContentLoaded', function() {
