@@ -66,7 +66,7 @@
     @endisset
     @foreach ($pages as $page)
         <url>
-            <loc>{{ url(route('page.show', [$page, $page->slug])) }}</loc>
+            <loc>{{ url(route('pages.show', [$page, $page->slug])) }}</loc>
             <lastmod>{{ $page->updated_at->format('Y-m-d') }}</lastmod>
             <changefreq>{{ setting('sitemap','static_pages_changefreq') }}</changefreq>
             <priority>{{ setting('sitemap','static_pages_priority') }}</priority>
