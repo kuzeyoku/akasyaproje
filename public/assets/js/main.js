@@ -29,9 +29,13 @@
     if (backToTopButton) {
         window.addEventListener("scroll", function () {
             if (window.scrollY > 300) {
-                backToTopButton.style.display = "flex";
+                backToTopButton.style.opacity = "1";
+                backToTopButton.style.visibility = "visible";
+                backToTopButton.style.pointerEvents = "auto";
             } else {
-                backToTopButton.style.display = "none";
+                backToTopButton.style.opacity = "0";
+                backToTopButton.style.visibility = "hidden";
+                backToTopButton.style.pointerEvents = "none";
             }
         });
 
@@ -110,115 +114,6 @@
         });
     });
 
-    // Contact form handling (for contact page)
-    const contactForm = document.getElementById("contactForm");
-    if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-
-            // Basic validation
-            if (!data.name || !data.email || !data.subject || !data.message) {
-                showAlert("Lütfen tüm alanları doldurun.", "danger");
-                return;
-            }
-
-            if (!isValidEmail(data.email)) {
-                showAlert("Lütfen geçerli bir e-posta adresi girin.", "danger");
-                return;
-            }
-
-            // Simulate form submission
-            showAlert(
-                "Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.",
-                "success"
-            );
-            this.reset();
-        });
-    }
-
-    // Quote form handling (for services page)
-    const quoteForm = document.getElementById("quoteForm");
-    if (quoteForm) {
-        quoteForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-
-            if (
-                !data.name ||
-                !data.email ||
-                !data.phone ||
-                !data.service ||
-                !data.description
-            ) {
-                showAlert("Lütfen tüm alanları doldurun.", "danger");
-                return;
-            }
-
-            if (!isValidEmail(data.email)) {
-                showAlert("Lütfen geçerli bir e-posta adresi girin.", "danger");
-                return;
-            }
-
-            showAlert(
-                "Teklif talebiniz alındı. 24 saat içinde size detaylı teklif sunacağız.",
-                "success"
-            );
-            this.reset();
-        });
-    }
-
-    // Newsletter subscription (if exists)
-    const newsletterForm = document.getElementById("newsletterForm");
-    if (newsletterForm) {
-        newsletterForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const email = this.querySelector('input[type="email"]').value;
-
-            if (!isValidEmail(email)) {
-                showAlert("Lütfen geçerli bir e-posta adresi girin.", "danger");
-                return;
-            }
-
-            showAlert("Bültenimize başarıyla abone oldunuz!", "success");
-            this.reset();
-        });
-    }
-
-    // Blog search functionality (for blog page)
-    const blogSearch = document.getElementById("blogSearch");
-    if (blogSearch) {
-        blogSearch.addEventListener("input", function () {
-            const searchTerm = this.value.toLowerCase();
-            const blogCards = document.querySelectorAll(".blog-card");
-
-            blogCards.forEach((card) => {
-                const title = card
-                    .querySelector("h5")
-                    .textContent.toLowerCase();
-                const content = card
-                    .querySelector("p")
-                    .textContent.toLowerCase();
-
-                if (
-                    title.includes(searchTerm) ||
-                    content.includes(searchTerm)
-                ) {
-                    card.closest(".col-lg-4, .col-md-6").style.display =
-                        "block";
-                } else {
-                    card.closest(".col-lg-4, .col-md-6").style.display = "none";
-                }
-            });
-        });
-    }
-
     // Project filter functionality (for projects page)
     const projectFilters = document.querySelectorAll("[data-filter]");
     if (projectFilters.length > 0) {
@@ -291,37 +186,6 @@
         document.querySelectorAll("img[data-src]").forEach((img) => {
             imageObserver.observe(img);
         });
-    }
-
-    // Utility Functions
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
-    function showAlert(message, type = "info") {
-        // Remove existing alerts
-        const existingAlerts = document.querySelectorAll(".custom-alert");
-        existingAlerts.forEach((alert) => alert.remove());
-
-        // Create new alert
-        const alertDiv = document.createElement("div");
-        alertDiv.className = `alert alert-${type} alert-dismissible fade show custom-alert`;
-        alertDiv.style.cssText =
-            "position: fixed; top: 20px; right: 20px; z-index: 9999; min-width: 300px;";
-        alertDiv.innerHTML = `
-            ${message}
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        `;
-
-        document.body.appendChild(alertDiv);
-
-        // Auto-remove after 5 seconds
-        setTimeout(() => {
-            if (alertDiv && alertDiv.parentNode) {
-                alertDiv.remove();
-            }
-        }, 5000);
     }
 
     // Loading animation for page elements
@@ -471,13 +335,12 @@ function getCookie(name) {
 
 function showNotification(message, type) {
     const notification = document.createElement("div");
-    notification.className = `notification ${type}`;
+    notification.className = `notification bg-${type}`;
+
     notification.innerHTML = `
-                <i class="fas fa-${
-                    type === "success" ? "check" : "info"
-                }-circle me-2"></i>
-                ${message}
-            `;
+    <i class="fas fa-info-circle me-2"></i>
+    ${message}
+`;
 
     document.body.appendChild(notification);
 
