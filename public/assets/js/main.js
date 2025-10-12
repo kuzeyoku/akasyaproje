@@ -1,196 +1,200 @@
 // Main JavaScript for GeoPlan Engineering Website
-
 (function () {
     "use strict";
 
-    // Initialize AOS (Animate On Scroll)
+    // ========== Utility Functions ==========
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func(...args), wait);
+        };
+    }
+
+    function setCookie(name, value, days) {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie = `${name}=${value};expires=${expires};path=/`;
+    }
+
+    function getCookie(name) {
+        return document.cookie.split('; ')
+            .find(row => row.startsWith(name + '='))
+            ?.split('=')[1];
+    }
+
+    // ========== Initialization ==========
     document.addEventListener("DOMContentLoaded", function () {
-        AOS.init({
-            duration: 800,
-            easing: "ease-out-cubic",
-            once: true,
-            offset: 100,
-        });
-    });
-
-    // Navbar scroll effect
-    window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
+        // Initialize AOS
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: "ease-out-cubic",
+                once: true,
+                offset: 100,
+                disable: window.innerWidth < 768 ? true : false
+            });
         }
+
+        // Initialize all features
+        initNavbar();
+        initBackToTop();
+        initSmoothScroll();
+        initCarousel();
+        initCardHoverEffects();
+        initProjectFilters();
+        initModelViewer();
+        initLazyLoading();
+        initLoadingAnimations();
+        initMobileMenu();
+        initCookieBanner();
     });
 
-    // Back to top button
-    const backToTopButton = document.getElementById("backToTop");
+    // ========== Navbar ==========
+    function initNavbar() {
+        const navbar = document.querySelector(".navbar");
+        if (!navbar) return;
 
-    if (backToTopButton) {
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 300) {
-                backToTopButton.style.opacity = "1";
-                backToTopButton.style.visibility = "visible";
-                backToTopButton.style.pointerEvents = "auto";
-            } else {
-                backToTopButton.style.opacity = "0";
-                backToTopButton.style.visibility = "hidden";
-                backToTopButton.style.pointerEvents = "none";
-            }
-        });
+        const scrollHandler = debounce(() => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        }, 10);
 
-        backToTopButton.addEventListener("click", function (e) {
+        window.addEventListener("scroll", scrollHandler, { passive: true });
+    }
+
+    // ========== Back to Top ==========
+    function initBackToTop() {
+        const btn = document.getElementById("backToTop");
+        if (!btn) return;
+
+        const scrollHandler = debounce(() => {
+            const show = window.scrollY > 300;
+            btn.style.opacity = show ? "1" : "0";
+            btn.style.visibility = show ? "visible" : "hidden";
+            btn.style.pointerEvents = show ? "auto" : "none";
+        }, 10);
+
+        window.addEventListener("scroll", scrollHandler, { passive: true });
+
+        btn.addEventListener("click", (e) => {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+
+    // ========== Smooth Scroll ==========
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    e.preventDefault();
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                }
             });
         });
     }
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
-            if (target) {
-                const offsetTop = target.offsetTop - 80; // Account for fixed navbar
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: "smooth",
-                });
-            }
-        });
-    });
+    // ========== Carousel ==========
+    function initCarousel() {
+        const carousel = document.querySelector("#heroCarousel");
+        if (!carousel || typeof bootstrap === 'undefined') return;
 
-    // Enhanced carousel auto-play with pause on hover
-    const carousel = document.querySelector("#heroCarousel");
-    if (carousel) {
-        const carouselInstance = new bootstrap.Carousel(carousel, {
+        const instance = new bootstrap.Carousel(carousel, {
             interval: 5000,
             ride: "carousel",
             pause: "hover",
         });
 
-        // Pause carousel when user interacts with indicators or controls
         carousel.addEventListener("slide.bs.carousel", function () {
-            carouselInstance.pause();
-            setTimeout(() => {
-                carouselInstance.cycle();
-            }, 3000);
+            instance.pause();
+            setTimeout(() => instance.cycle(), 3000);
         });
     }
 
-    // Service card hover effects
-    document.querySelectorAll(".service-card").forEach((card) => {
-        card.addEventListener("mouseenter", function () {
-            this.style.transform = "translateY(-10px)";
-        });
+    // ========== Card Hover Effects ==========
+    function initCardHoverEffects() {
+        const cardTypes = [
+            { selector: ".service-card", translateY: -10 },
+            { selector: ".project-card", translateY: -5 },
+            { selector: ".blog-card", translateY: -5 }
+        ];
 
-        card.addEventListener("mouseleave", function () {
-            this.style.transform = "translateY(0)";
+        cardTypes.forEach(({ selector, translateY }) => {
+            document.querySelectorAll(selector).forEach((card) => {
+                card.addEventListener("mouseenter", () => {
+                    card.style.transform = `translateY(${translateY}px)`;
+                });
+                card.addEventListener("mouseleave", () => {
+                    card.style.transform = "translateY(0)";
+                });
+            });
         });
-    });
+    }
 
-    // Project card hover effects
-    document.querySelectorAll(".project-card").forEach((card) => {
-        card.addEventListener("mouseenter", function () {
-            this.style.transform = "translateY(-5px)";
-        });
+    // ========== Project Filters ==========
+    function initProjectFilters() {
+        const filters = document.querySelectorAll("[data-filter]");
+        if (filters.length === 0) return;
 
-        card.addEventListener("mouseleave", function () {
-            this.style.transform = "translateY(0)";
-        });
-    });
-
-    // Blog card hover effects
-    document.querySelectorAll(".blog-card").forEach((card) => {
-        card.addEventListener("mouseenter", function () {
-            this.style.transform = "translateY(-5px)";
-        });
-
-        card.addEventListener("mouseleave", function () {
-            this.style.transform = "translateY(0)";
-        });
-    });
-
-    // Project filter functionality (for projects page)
-    const projectFilters = document.querySelectorAll("[data-filter]");
-    if (projectFilters.length > 0) {
-        projectFilters.forEach((filter) => {
+        filters.forEach((filter) => {
             filter.addEventListener("click", function (e) {
                 e.preventDefault();
 
-                // Remove active class from all filters
-                projectFilters.forEach((f) => f.classList.remove("active"));
-                // Add active class to clicked filter
+                filters.forEach((f) => f.classList.remove("active"));
                 this.classList.add("active");
 
                 const filterValue = this.getAttribute("data-filter");
                 const projectCards = document.querySelectorAll(".project-card");
 
                 projectCards.forEach((card) => {
-                    const cardStatus = card.querySelector(".project-status");
-                    const cardCategory = cardStatus ? cardStatus.id : "";
-                    if (
-                        filterValue === "all" ||
-                        cardCategory.includes(filterValue)
-                    ) {
-                        card.closest(".col-lg-4, .col-md-6").style.display =
-                            "block";
-                    } else {
-                        card.closest(".col-lg-4, .col-md-6").style.display =
-                            "none";
-                    }
+                    const status = card.querySelector(".project-status");
+                    const category = status ? status.id : "";
+                    const shouldShow = filterValue === "all" || category.includes(filterValue);
+                    const parent = card.closest(".col-lg-4, .col-md-6");
+                    if (parent) parent.style.display = shouldShow ? "block" : "none";
                 });
             });
         });
     }
 
-    // 3D Model viewer toggle (for project detail page)
-    const modelViewerBtn = document.getElementById("modelViewerBtn");
-    const modelViewer = document.getElementById("modelViewer");
+    // ========== Model Viewer ==========
+    function initModelViewer() {
+        const btn = document.getElementById("modelViewerBtn");
+        const viewer = document.getElementById("modelViewer");
+        if (!btn || !viewer) return;
 
-    if (modelViewerBtn && modelViewer) {
-        modelViewerBtn.addEventListener("click", function () {
-            if (
-                modelViewer.style.display === "none" ||
-                !modelViewer.style.display
-            ) {
-                modelViewer.style.display = "block";
-                this.textContent = "Modeli Gizle";
-                this.classList.remove("btn-primary");
-                this.classList.add("btn-secondary");
-            } else {
-                modelViewer.style.display = "none";
-                this.textContent = "Modeli Görüntüle";
-                this.classList.remove("btn-secondary");
-                this.classList.add("btn-primary");
-            }
+        btn.addEventListener("click", function () {
+            const isHidden = viewer.style.display === "none" || !viewer.style.display;
+            viewer.style.display = isHidden ? "block" : "none";
+            this.textContent = isHidden ? "Modeli Gizle" : "Modeli Görüntüle";
+            this.classList.toggle("btn-primary", !isHidden);
+            this.classList.toggle("btn-secondary", isHidden);
         });
     }
 
-    // Lazy loading for images
-    if ("IntersectionObserver" in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
+    // ========== Lazy Loading ==========
+    function initLazyLoading() {
+        if (!("IntersectionObserver" in window)) return;
+
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
                     img.src = img.dataset.src;
                     img.classList.remove("lazy");
-                    imageObserver.unobserve(img);
+                    observer.unobserve(img);
                 }
             });
         });
 
-        document.querySelectorAll("img[data-src]").forEach((img) => {
-            imageObserver.observe(img);
-        });
+        document.querySelectorAll("img[data-src]").forEach((img) => observer.observe(img));
     }
 
-    // Loading animation for page elements
+    // ========== Loading Animations ==========
     function initLoadingAnimations() {
         const elements = document.querySelectorAll(".loading");
+        if (elements.length === 0) return;
 
         const observer = new IntersectionObserver(
             (entries) => {
@@ -200,174 +204,93 @@
                     }
                 });
             },
-            {
-                threshold: 0.1,
-            }
+            { threshold: 0.1 }
         );
 
-        elements.forEach((element) => {
-            observer.observe(element);
-        });
+        elements.forEach((el) => observer.observe(el));
     }
 
-    // Initialize loading animations
-    initLoadingAnimations();
+    // ========== Mobile Menu ==========
+    function initMobileMenu() {
+        const toggler = document.querySelector(".navbar-toggler");
+        const collapse = document.querySelector(".navbar-collapse");
+        if (!toggler || !collapse) return;
 
-    // Mobile menu enhancements
-    const navbarToggler = document.querySelector(".navbar-toggler");
-    const navbarCollapse = document.querySelector(".navbar-collapse");
-
-    if (navbarToggler && navbarCollapse) {
-        // Close mobile menu when clicking on a link
-        navbarCollapse.querySelectorAll(".nav-link").forEach((link) => {
+        // Close menu on link click
+        collapse.querySelectorAll(".nav-link").forEach((link) => {
             link.addEventListener("click", () => {
-                if (navbarCollapse.classList.contains("show")) {
-                    navbarToggler.click();
-                }
+                if (collapse.classList.contains("show")) toggler.click();
             });
         });
 
-        // Close mobile menu when clicking outside
+        // Close menu on outside click
         document.addEventListener("click", (e) => {
-            if (
-                !navbarToggler.contains(e.target) &&
-                !navbarCollapse.contains(e.target)
-            ) {
-                if (navbarCollapse.classList.contains("show")) {
-                    navbarToggler.click();
-                }
+            if (!toggler.contains(e.target) && !collapse.contains(e.target)) {
+                if (collapse.classList.contains("show")) toggler.click();
             }
         });
     }
 
-    // Performance optimization: Debounce scroll events
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
+    // ========== Cookie Banner ==========
+    function initCookieBanner() {
+        const consent = getCookie("cookieConsent");
+        if (!consent) {
+            setTimeout(showCookieBanner, 2000);
+        }
+    }
+
+    window.showCookieBanner = function () {
+        const banner = document.getElementById("cookieBanner");
+        if (banner) banner.classList.add("show");
+    };
+
+    window.hideCookieBanner = function () {
+        const banner = document.getElementById("cookieBanner");
+        if (banner) banner.classList.remove("show");
+    };
+
+    window.acceptCookies = function () {
+        setCookie("cookieConsent", "accepted", 365);
+        setCookie("analyticsEnabled", "true", 365);
+        setCookie("marketingEnabled", "true", 365);
+        setCookie("functionalEnabled", "true", 365);
+        hideCookieBanner();
+        showNotification("Çerezler kabul edildi! Tüm site özellikleri aktif.", "success");
+    };
+
+    window.declineCookies = function () {
+        setCookie("cookieConsent", "declined", 365);
+        setCookie("analyticsEnabled", "false", 365);
+        setCookie("marketingEnabled", "false", 365);
+        setCookie("functionalEnabled", "false", 365);
+        hideCookieBanner();
+        showNotification("Çerezler reddedildi. Sadece zorunlu çerezler aktif.", "info");
+    };
+
+    // ========== Notifications ==========
+    window.showNotification = function (message, type = "info") {
+        const icons = {
+            success: "check-circle",
+            error: "exclamation-circle",
+            warning: "exclamation-triangle",
+            info: "info-circle"
         };
-    }
 
-    // Apply debounce to scroll events
-    const debouncedScrollHandler = debounce(() => {
-        const navbar = document.querySelector(".navbar");
-        const backToTopButton = document.getElementById("backToTop");
+        const notification = document.createElement("div");
+        notification.className = `notification bg-${type}`;
+        notification.innerHTML = `
+            <i class="fas fa-${icons[type] || 'bell'} me-2"></i>
+            ${message}
+        `;
 
-        if (window.scrollY > 50) {
-            navbar?.classList.add("scrolled");
-        } else {
-            navbar?.classList.remove("scrolled");
-        }
+        document.body.appendChild(notification);
 
-        if (backToTopButton) {
-            if (window.scrollY > 300) {
-                backToTopButton.style.display = "flex";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        }
-    }, 10);
+        setTimeout(() => notification.classList.add("show"), 100);
 
-    window.addEventListener("scroll", debouncedScrollHandler);
-})();
-
-function showCookieBanner() {
-    const banner = document.getElementById("cookieBanner");
-    banner.classList.add("show");
-}
-
-function hideCookieBanner() {
-    const banner = document.getElementById("cookieBanner");
-    banner.classList.remove("show");
-}
-
-function acceptCookies() {
-    // Tüm çerezleri kabul et
-    setCookie("cookieConsent", "accepted", 365);
-    setCookie("analyticsEnabled", "true", 365);
-    setCookie("marketingEnabled", "true", 365);
-    setCookie("functionalEnabled", "true", 365);
-
-    hideCookieBanner();
-    showNotification(
-        "Çerezler kabul edildi! Tüm site özellikleri aktif.",
-        "success"
-    );
-}
-
-function declineCookies() {
-    // Sadece zorunlu çerezler
-    setCookie("cookieConsent", "declined", 365);
-    setCookie("analyticsEnabled", "false", 365);
-    setCookie("marketingEnabled", "false", 365);
-    setCookie("functionalEnabled", "false", 365);
-
-    hideCookieBanner();
-    showNotification(
-        "Çerezler reddedildi. Sadece zorunlu çerezler aktif.",
-        "info"
-    );
-}
-
-// Helper functions
-function setCookie(name, value, days) {
-    const expires = new Date();
-    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-    document.cookie =
-        name + "=" + value + ";expires=" + expires.toUTCString() + ";path=/";
-}
-
-function getCookie(name) {
-    const nameEQ = name + "=";
-    const ca = document.cookie.split(";");
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == " ") c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-}
-
-function showNotification(message, type) {
-    const notification = document.createElement("div");
-    notification.className = `notification bg-${type}`;
-
-    notification.innerHTML = `
-    <i class="fas fa-info-circle me-2"></i>
-    ${message}
-`;
-
-    document.body.appendChild(notification);
-
-    // Animasyonla göster
-    setTimeout(() => {
-        notification.classList.add("show");
-    }, 100);
-
-    // 4 saniye sonra kaldır
-    setTimeout(() => {
-        notification.classList.remove("show");
         setTimeout(() => {
-            notification.remove();
-        }, 300);
-    }, 4000);
-}
+            notification.classList.remove("show");
+            setTimeout(() => notification.remove(), 300);
+        }, 4000);
+    };
 
-// Sayfa yüklendiğinde kontrol et
-document.addEventListener("DOMContentLoaded", function () {
-    const consent = getCookie("cookieConsent");
-    if (!consent) {
-        // 2 saniye sonra göster
-        setTimeout(showCookieBanner, 2000);
-    } else {
-        console.log("Cookie consent durumu:", consent);
-        console.log("Analytics:", getCookie("analyticsEnabled"));
-        console.log("Marketing:", getCookie("marketingEnabled"));
-        console.log("Functional:", getCookie("functionalEnabled"));
-    }
-});
+})();
