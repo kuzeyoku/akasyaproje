@@ -19,6 +19,10 @@
     @yield('content')
     @include('layouts.footer')
     @include('layouts.cookie')
+    <button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle"
+        style="opacity: 0; visibility: hidden; pointer-events: none; z-index: 1000; transition: opacity 0.3s, visibility 0.3s;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/aos.js') }}"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
