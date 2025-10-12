@@ -13,41 +13,6 @@
         });
     });
 
-    // Navbar scroll effect
-    window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
-    });
-
-    // Back to top button
-    const backToTopButton = document.getElementById("backToTop");
-
-    if (backToTopButton) {
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 300) {
-                backToTopButton.style.opacity = "1";
-                backToTopButton.style.visibility = "visible";
-                backToTopButton.style.pointerEvents = "auto";
-            } else {
-                backToTopButton.style.opacity = "0";
-                backToTopButton.style.visibility = "hidden";
-                backToTopButton.style.pointerEvents = "none";
-            }
-        });
-
-        backToTopButton.addEventListener("click", function (e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
-        });
-    }
-
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
@@ -258,17 +223,23 @@
         const navbar = document.querySelector(".navbar");
         const backToTopButton = document.getElementById("backToTop");
 
+        // Navbar
         if (window.scrollY > 50) {
             navbar?.classList.add("scrolled");
         } else {
             navbar?.classList.remove("scrolled");
         }
 
+        // Back to top button
         if (backToTopButton) {
             if (window.scrollY > 300) {
-                backToTopButton.style.display = "flex";
+                backToTopButton.style.opacity = "1";
+                backToTopButton.style.visibility = "visible";
+                backToTopButton.style.pointerEvents = "auto";
             } else {
-                backToTopButton.style.display = "none";
+                backToTopButton.style.opacity = "0";
+                backToTopButton.style.visibility = "hidden";
+                backToTopButton.style.pointerEvents = "none";
             }
         }
     }, 10);
