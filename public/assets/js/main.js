@@ -17,21 +17,22 @@
     }
 
     function getCookie(name) {
-        return document.cookie.split('; ')
-            .find(row => row.startsWith(name + '='))
-            ?.split('=')[1];
+        return document.cookie
+            .split("; ")
+            .find((row) => row.startsWith(name + "="))
+            ?.split("=")[1];
     }
 
     // ========== Initialization ==========
     document.addEventListener("DOMContentLoaded", function () {
         // Initialize AOS
-        if (typeof AOS !== 'undefined') {
+        if (typeof AOS !== "undefined") {
             AOS.init({
                 duration: 800,
                 easing: "ease-out-cubic",
                 once: true,
                 offset: 100,
-                disable: window.innerWidth < 768 ? true : false
+                disable: window.innerWidth < 768 ? true : false,
             });
         }
 
@@ -55,7 +56,7 @@
         if (!navbar) return;
 
         const scrollHandler = debounce(() => {
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
+            navbar.classList.toggle("scrolled", window.scrollY > 50);
         }, 10);
 
         window.addEventListener("scroll", scrollHandler, { passive: true });
@@ -85,7 +86,9 @@
     function initSmoothScroll() {
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
             anchor.addEventListener("click", function (e) {
-                const target = document.querySelector(this.getAttribute("href"));
+                const target = document.querySelector(
+                    this.getAttribute("href")
+                );
                 if (target) {
                     e.preventDefault();
                     const offsetTop = target.offsetTop - 80;
@@ -98,7 +101,7 @@
     // ========== Carousel ==========
     function initCarousel() {
         const carousel = document.querySelector("#heroCarousel");
-        if (!carousel || typeof bootstrap === 'undefined') return;
+        if (!carousel || typeof bootstrap === "undefined") return;
 
         const instance = new bootstrap.Carousel(carousel, {
             interval: 5000,
@@ -117,7 +120,7 @@
         const cardTypes = [
             { selector: ".service-card", translateY: -10 },
             { selector: ".project-card", translateY: -5 },
-            { selector: ".blog-card", translateY: -5 }
+            { selector: ".blog-card", translateY: -5 },
         ];
 
         cardTypes.forEach(({ selector, translateY }) => {
@@ -150,9 +153,11 @@
                 projectCards.forEach((card) => {
                     const status = card.querySelector(".project-status");
                     const category = status ? status.id : "";
-                    const shouldShow = filterValue === "all" || category.includes(filterValue);
+                    const shouldShow =
+                        filterValue === "all" || category.includes(filterValue);
                     const parent = card.closest(".col-lg-4, .col-md-6");
-                    if (parent) parent.style.display = shouldShow ? "block" : "none";
+                    if (parent)
+                        parent.style.display = shouldShow ? "block" : "none";
                 });
             });
         });
@@ -165,7 +170,8 @@
         if (!btn || !viewer) return;
 
         btn.addEventListener("click", function () {
-            const isHidden = viewer.style.display === "none" || !viewer.style.display;
+            const isHidden =
+                viewer.style.display === "none" || !viewer.style.display;
             viewer.style.display = isHidden ? "block" : "none";
             this.textContent = isHidden ? "Modeli Gizle" : "Modeli Görüntüle";
             this.classList.toggle("btn-primary", !isHidden);
@@ -188,7 +194,9 @@
             });
         });
 
-        document.querySelectorAll("img[data-src]").forEach((img) => observer.observe(img));
+        document
+            .querySelectorAll("img[data-src]")
+            .forEach((img) => observer.observe(img));
     }
 
     // ========== Loading Animations ==========
@@ -216,17 +224,36 @@
         const collapse = document.querySelector(".navbar-collapse");
         if (!toggler || !collapse) return;
 
-        // Close menu on link click
+        // Close menu on link click - DROPDOWN HARIC
         collapse.querySelectorAll(".nav-link").forEach((link) => {
-            link.addEventListener("click", () => {
-                if (collapse.classList.contains("show")) toggler.click();
+            link.addEventListener("click", (e) => {
+                // Eğer dropdown toggle ise kapanmasın
+                if (link.classList.contains("dropdown-toggle")) {
+                    return;
+                }
+
+                // Normal link ise menüyü kapat
+                if (collapse.classList.contains("show")) {
+                    toggler.click();
+                }
+            });
+        });
+
+        // Dropdown item'lara tıklayınca menüyü kapat
+        collapse.querySelectorAll(".dropdown-item").forEach((item) => {
+            item.addEventListener("click", () => {
+                if (collapse.classList.contains("show")) {
+                    toggler.click();
+                }
             });
         });
 
         // Close menu on outside click
         document.addEventListener("click", (e) => {
             if (!toggler.contains(e.target) && !collapse.contains(e.target)) {
-                if (collapse.classList.contains("show")) toggler.click();
+                if (collapse.classList.contains("show")) {
+                    toggler.click();
+                }
             }
         });
     }
@@ -255,7 +282,10 @@
         setCookie("marketingEnabled", "true", 365);
         setCookie("functionalEnabled", "true", 365);
         hideCookieBanner();
-        showNotification("Çerezler kabul edildi! Tüm site özellikleri aktif.", "success");
+        showNotification(
+            "Çerezler kabul edildi! Tüm site özellikleri aktif.",
+            "success"
+        );
     };
 
     window.declineCookies = function () {
@@ -264,7 +294,10 @@
         setCookie("marketingEnabled", "false", 365);
         setCookie("functionalEnabled", "false", 365);
         hideCookieBanner();
-        showNotification("Çerezler reddedildi. Sadece zorunlu çerezler aktif.", "info");
+        showNotification(
+            "Çerezler reddedildi. Sadece zorunlu çerezler aktif.",
+            "info"
+        );
     };
 
     // ========== Notifications ==========
@@ -273,13 +306,13 @@
             success: "check-circle",
             error: "exclamation-circle",
             warning: "exclamation-triangle",
-            info: "info-circle"
+            info: "info-circle",
         };
 
         const notification = document.createElement("div");
         notification.className = `notification bg-${type}`;
         notification.innerHTML = `
-            <i class="fas fa-${icons[type] || 'bell'} me-2"></i>
+            <i class="fas fa-${icons[type] || "bell"} me-2"></i>
             ${message}
         `;
 
@@ -292,5 +325,4 @@
             setTimeout(() => notification.remove(), 300);
         }, 4000);
     };
-
 })();
