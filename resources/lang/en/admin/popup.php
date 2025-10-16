@@ -1,15 +1,14 @@
 <?php
 
 return [
-    'title' => 'Popup Yönetimi',
+    'title' => 'Popup',
+    'menu_title' => 'Popup Yönetimi',
     'description' => 'Popupları Yönetin',
-    'single_title' => 'Popup',
-    'alert_title' => 'Popup',
     'create' => 'Popup Ekle',
     'create_description' => 'Yeni bir popup oluşturun',
     'edit' => 'Popup Düzenle',
     'edit_description' => 'Popup bilgilerini düzenleyin',
-    'list' => 'Popup Listesi',
+    'index' => 'Popup Listesi',
     'form_image' => 'Resim',
     'form_type' => 'Popup Tipi',
     'form_title' => 'Popup Başlığı',

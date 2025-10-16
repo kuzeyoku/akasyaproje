@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'title' => 'Medya Yönetimi',
+    'title' => 'Medya',
+    'menu_title' => 'Medya Yönetimi',
     'description' => 'Medya Dosyalarını Yönetin',
     'delete_success' => 'Medya başarıyla silindi.',
     'delete_error' => 'Medya silinirken bir hata oluştu.',

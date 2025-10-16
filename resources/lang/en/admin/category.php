@@ -1,15 +1,14 @@
 <?php
 
 return [
-    'title' => 'Kategori Yönetimi',
+    'title' => 'Kategori',
+    'menu_title' => 'Kategori Yönetimi',
     'description' => 'Kategorileri Yönetin',
-    'single_title' => 'Kategoriler',
-    'alert_title' => 'Kategori',
     'create' => 'Kategori Oluştur',
     'create_description' => 'Yeni Kategori Oluştur',
     'edit' => 'Kategori Düzenle',
     'edit_description' => 'Kategori Düzenle',
-    'list' => 'Kategori Listesi',
+    'index' => 'Kategori Listesi',
     'form_title' => 'Kategori Başlığı',
     'form_title_placeholder' => 'Kategori Başlığı Giriniz',
     'form_description' => 'Kategori Açıklaması',

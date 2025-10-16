@@ -1,13 +1,12 @@
 <?php
 
 return [
-    'title' => 'Kullanıcı Yönetimi',
+    'title' => 'Kullanıcılar',
+    'menu_title' => 'Kullanıcı Yönetimi',
     'description' => 'Kullanıcıları Yönetin',
-    'single_title' => 'Editör',
-    'alert_title' => 'Kullanıcı',
     'create' => 'Kullanıcı Ekle',
     'create_description' => 'Yeni bir kullanıcı oluşturun',
-    'list' => 'Kullanıcı Listesi',
+    'index' => 'Kullanıcı Listesi',
     'form_name' => 'Adı Soyadı',
     'form_name_placeholder' => 'Adı Soyadı Giriniz',
     'form_email' => 'E-Posta Adresi',
@@ -17,6 +16,8 @@ return [
     'form_password_confirmation' => 'Şifre Tekrarı',
     'form_password_confirmation_placeholder' => 'Şifre Tekrarı Giriniz',
     'form_role' => 'Rolü',
+    'form_about' => 'Hakkında',
+    'form_about_placeholder' => 'Yazar hakkında alanında görünecek metin.',
     'table_name' => 'Adı',
     'table_role' => 'Rolü',
     'delete_error_last' => 'Son kullanıcı silinemez.',

@@ -1,15 +1,14 @@
 <?php
 
 return [
-    'title' => 'Slider Yönetimi',
+    'title' => 'Slider',
+    'menu_title' => 'Slider Yönetimi',
     'description' => 'Sliderları Yönetin',
-    'single_title' => 'Slider',
-    'alert_title' => 'Slider',
     'create' => 'Slider Ekle',
     'create_description' => 'Yeni bir slider oluşturun',
     'edit' => 'Slider Düzenle',
     'edit_description' => 'Slider bilgilerini düzenleyin',
-    'list' => 'Slider Listesi',
+    'index' => 'Slider Listesi',
     'form_image' => 'Slider Görseli',
     'form_title' => 'Slider Başlığı',
     'form_title_placeholder' => 'Slider Başlığı Giriniz',

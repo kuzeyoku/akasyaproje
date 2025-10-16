@@ -20,7 +20,7 @@
                     <td>{{ $item->updated_at->diffForHumans() }}</td>
                     @include(themeView('admin', 'layout.status'))
                     @include(themeView('admin', 'layout.action'), [
-                        'file' => '',
+                        'files' => '',
                         'edit' => '',
                         'delete' => '',
                     ])

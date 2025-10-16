@@ -17,7 +17,7 @@ return [
     'uncategorized' => 'Kategori Yok',
     'are_you_sure' => 'Emin misiniz?',
     'this_action_cannot_be_undone' => 'Bu işlem geri alınamaz!',
-    'yes_delete_it' => 'Evet, sil!',
+    'yes_confirm' => 'Evet, Eminim!',
     'yes_clear_it' => 'Evet, temizle!',
     'cancel' => 'İptal',
     'close' => 'Kapat',

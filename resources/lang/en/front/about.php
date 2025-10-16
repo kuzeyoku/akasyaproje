@@ -1,10 +1,15 @@
 <?php
-
 return [
-    'txt1' => 'Biz Kimiz ?',
-    'txt2' => 'Kuzey Oku | Harita ve Madencilik',
-    'txt3' => '10 yılı aşkın tecrübemizle, hassasiyeti ön planda tutarak haritalama sektörüne özel hizmetler sunmaktayız.  Alanında uzman ekibimiz, en güncel teknolojileri kullanarak, size en doğru ve hızlı çözümleri sunmaya odaklanmıştır.  Müşteri memnuniyeti bizim için her şeyden önce gelir. Bu nedenle, her projenin kusursuz bir şekilde tamamlanması için titizlikle çalışırız.',
-    'txt4' => 'Yaratıcı çözümler geliştirerek ve yeni teknolojileri kullanarak, size her zaman en iyi hizmeti sunuyoruz.',
-    'txt5' => 'Tanıtım Videomuzu <br> İzlediniz mi ?',
-    'txt6' => 'Hakkımızda',
+'txt1' => 'Akasya Harita Proje Planlama',
+'txt2' => 'Akasya Proje olarak 2016 yılından bu yana haritacılık ve jeodezi sektöründe öncü rolümüzü sürdürüyoruz. Deneyimli mühendis kadromuz ve son teknoloji ekipmanlarımızla, her türlü haritacılık ihtiyacınıza profesyonel çözümler sunuyoruz.',
+'txt3' => 'Sertifikalı Ekip',
+'txt4' => 'Lisanslı mühendisler',
+'txt5' => 'Modern Teknoloji',
+'txt6' => 'Son teknoloji ekipmanlar',
+'txt7' => 'Hızlı Teslimat',
+'txt8' => 'Zamanında proje teslimi',
+'txt9' => 'Güvenilir Hizmet',
+'txt10' => '%100 müşteri memnuniyeti',
+'txt11' => 'Projelerimizi İnceleyin',
+'txt12' => 'İletişime Geç'
 ];

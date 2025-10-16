@@ -1,11 +1,12 @@
 <?php
 
 return [
-    'title' => 'Mesaj Yönetimi',
-    'alert_title' => 'Mesaj',
+    'title' => 'Mesajlar',
+    'menu_title' => 'Mesaj Yönetimi',
     'description' => 'Kullanıcılardan gelen mesajları yönetin ve yeni mesajlar gönderin.',
     'create' => 'Yeni Mesaj Gönder',
-    'list' => 'Mesaj Listesi',
+    'index' => 'Gelen Kutusu',
+    'blocked' => 'Engellenen Kullanıcılar',
     'show_title' => 'Mesaj Görüntüle',
     'show_description' => 'Kullanıcılardan gelen mesajları görüntüleyin ve yanıtlayın.',
     'reply_title' => 'Mesajı Yanıtla',
@@ -20,4 +21,7 @@ return [
     'form_content' => 'Mesajınız',
     'table_name' => 'Adı Soyadı',
     'table_subject' => 'Konu',
+    'table_email' => 'E-Mail',
+    'table_ip' => 'İp Adresi',
+    'already_blocked' => 'Bu kullanıcı zaten engellenmiş.',
 ];

@@ -1,15 +1,14 @@
 <?php
 
 return [
-    'title' => 'Blog Yönetimi',
+    'title' => 'Blog',
+    'menu_title' => 'Blog Yönetimi',
     'description' => 'Blog içeriklerini yönetin.',
-    'single_title' => 'Blog',
-    'alert_title' => 'Blog Konusu',
     'create' => 'İçerik Oluştur',
     'create_description' => 'Yeni bir blog içeriği oluşturun.',
     'edit' => 'İçerik Düzenle',
     'edit_description' => 'Blog içeriğini düzenleyin.',
-    'list' => 'İçerik Listesi',
+    'index' => 'İçerik Listesi',
     'comments' => 'Yorumlar',
     'comment_title' => 'Blog Yorumları',
     'comment_description' => 'Blog yorumlarını yönetin.',

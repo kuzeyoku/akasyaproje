@@ -1,15 +1,14 @@
 <?php
 
 return [
-    'title' => 'Referans Yönetimi',
+    'title' => 'Referanslar',
+    'menu_title' => 'Referans Yönetimi',
     'description' => 'Referansları Yönetin',
-    'single_title' => 'Referanslar',
-    'alert_title' => 'Referans',
     'create' => 'Referans Ekle',
     'create_description' => 'Yeni Referans Ekle',
     'edit' => 'Referans Düzenle',
     'edit_description' => 'Referans Düzenle',
-    'list' => 'Referanslar',
+    'index' => 'Referanslar',
     'form_title' => 'Referans Başlığı',
     'form_title_placeholder' => 'Referans Başlığı Giriniz',
     'form_url' => 'Referans Bağlantısı',

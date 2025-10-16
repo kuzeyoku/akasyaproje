@@ -1,15 +1,14 @@
 <?php
 
 return [
-    'title' => 'Proje Yönetimi',
+    'title' => 'Projeler',
+    'menu_title' => 'Proje Yönetimi',
     'description' => 'Projeleri Yönetin',
-    'single_title' => 'Projeler',
-    'alert_title' => 'Proje',
     'create' => 'Proje Oluştur',
     'create_description' => 'Yeni bir proje oluşturun',
     'edit' => 'Proje Düzenle',
     'edit_description' => 'Proje bilgilerini düzenleyin',
-    'list' => 'Proje Listesi',
+    'index' => 'Proje Listesi',
     'images' => 'Proje Görselleri',
     'form_title' => 'Proje Başlığı',
     'form_title_placeholder' => 'Proje Başlığı Giriniz',
@@ -18,6 +17,7 @@ return [
     'form_features' => 'Proje Özellikleri',
     'form_features_placeholder' => "Örnek: (Satır İle Ayırın)\n\nFirma : RhpSoft\nBütçe : 1.000.000 $",
     'form_category' => 'Kategori',
+    'form_process_status' => 'Süreç Durumu',
     'form_status' => 'Durum',
     'form_brochure' => 'Broşür',
     'form_video' => 'Video',

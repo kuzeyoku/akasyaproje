@@ -22,8 +22,8 @@
                 <i data-feather="message-square" class="feather-icon text-info"></i>
             </a>
         @endisset --}}
-        @isset($file)
-            <a class="me-2 p-2" href="{{ route("admin.{$route}.file", $item) }}">
+        @isset($files)
+            <a class="me-2 p-2" href="{{ route("admin.{$route}.files", $item) }}">
                 <i data-feather="file" class="feather-icon text-primary"></i>
             </a>
         @endisset

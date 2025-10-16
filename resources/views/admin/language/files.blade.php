@@ -10,7 +10,7 @@
             </div>
             <div class="page-btn">
                 <a href="{{ route("admin.{$route}.index") }}" class="btn btn-added"><i data-feather="list"
-                        class="me-2"></i>@lang("admin/{$folder}.list")</a>
+                        class="me-2"></i>@lang("admin/{$folder}.index")</a>
             </div>
         </div>
         <div class="card">
@@ -26,7 +26,7 @@
                     <div class="col-lg-6">
                         {{ html()->form()->route("admin.{$route}.files", $language)->open() }}
                         {{ html()->hidden('folder', 'front') }}
-                        {{ html()->label(__("admin/{$route}.form_site_files")) }}
+                        {{ html()->label(__("admin/{$folder}.form_site_files")) }}
                         {{ html()->select('filename', $frontFiles, $dir == 'front' ? $filename : 'default')->placeholder(__('admin/general.select'))->class('form-control')->attribute('onchange', 'this.form.submit()') }}
                         {{ html()->form()->close() }}
                     </div>

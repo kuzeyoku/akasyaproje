@@ -11,7 +11,7 @@
             </div>
             <div class="page-btn">
                 <a href="{{ route("admin.{$route}.index") }}" class="btn btn-added"><i data-feather="list"
-                        class="me-2"></i>@lang("admin/{$folder}.list")</a>
+                        class="me-2"></i>@lang("admin/{$folder}.index")</a>
             </div>
         </div>
         <div class="card">

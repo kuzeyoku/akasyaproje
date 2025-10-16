@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'txt1' => 'Ana Sayfa',
+    'home' => 'Ana Sayfa',
 ];
